@@ -713,8 +713,8 @@
     "/static/css/base_style.css": {
       "archivo": "recursos/static/css/base_style.css",
       "tipo": "text/css; charset=utf-8",
-      "sha256": "99cbf8e30bf0f2689a5302482d678d66f6efb603f7bc542c89332b290208e316",
-      "bytes": 3906
+      "sha256": "6e346644a6c031282d11a2a51e9978a18301d9efbf49aa2707c532eaa27714c9",
+      "bytes": 5935
     },
     "/static/logo.png": {
       "archivo": "recursos/static/logo.png",
@@ -725,74 +725,74 @@
     "/modulos/cpp/static/css/base_style.css": {
       "archivo": "recursos/modulos/cpp/static/css/base_style.css",
       "tipo": "text/css; charset=utf-8",
-      "sha256": "99cbf8e30bf0f2689a5302482d678d66f6efb603f7bc542c89332b290208e316",
-      "bytes": 3906
+      "sha256": "6e346644a6c031282d11a2a51e9978a18301d9efbf49aa2707c532eaa27714c9",
+      "bytes": 5935
     },
     "/modulos/cpp/static/css/modulo.css": {
       "archivo": "recursos/modulos/cpp/static/css/modulo.css",
       "tipo": "text/css; charset=utf-8",
-      "sha256": "ea80a5880b3a349e04889cc269dd153a002a7c82433f2a10b454803d7824bc4e",
-      "bytes": 1332
+      "sha256": "3a1a9dfc34b5e9ec025c1260162cc187aca07a91803ed7fb07330b24d8d5a31b",
+      "bytes": 1455
     },
     "/modulos/html-js/static/css/base_style.css": {
       "archivo": "recursos/modulos/html-js/static/css/base_style.css",
       "tipo": "text/css; charset=utf-8",
-      "sha256": "99cbf8e30bf0f2689a5302482d678d66f6efb603f7bc542c89332b290208e316",
-      "bytes": 3906
+      "sha256": "6e346644a6c031282d11a2a51e9978a18301d9efbf49aa2707c532eaa27714c9",
+      "bytes": 5935
     },
     "/modulos/html-js/static/css/style.css": {
       "archivo": "recursos/modulos/html-js/static/css/style.css",
       "tipo": "text/css; charset=utf-8",
-      "sha256": "197c71549afddbb045f2112d4d7e079ab85f0c8da39d4fbb878b15f8f025c8ef",
-      "bytes": 1172
+      "sha256": "c47ce1890caa46d34c4a1d65c527149a95835a8fae675298c2ba837eefbe51cc",
+      "bytes": 1542
     },
     "/modulos/sql/static/css/base_style.css": {
       "archivo": "recursos/modulos/sql/static/css/base_style.css",
       "tipo": "text/css; charset=utf-8",
-      "sha256": "99cbf8e30bf0f2689a5302482d678d66f6efb603f7bc542c89332b290208e316",
-      "bytes": 3906
+      "sha256": "6e346644a6c031282d11a2a51e9978a18301d9efbf49aa2707c532eaa27714c9",
+      "bytes": 5935
     },
     "/modulos/sql/static/css/style.css": {
       "archivo": "recursos/modulos/sql/static/css/style.css",
       "tipo": "text/css; charset=utf-8",
-      "sha256": "807015f281c295ca57fb34577faec5751d23589c01e67d6fe4f3cd3ae0c0df1e",
-      "bytes": 2083
+      "sha256": "d6a8949f6810633f11c54e2374ef5e4a52ebbc178db160dc4ca981b6aa4ad8f6",
+      "bytes": 2281
     },
     "/modulos/python/static/css/base_style.css": {
       "archivo": "recursos/modulos/python/static/css/base_style.css",
       "tipo": "text/css; charset=utf-8",
-      "sha256": "99cbf8e30bf0f2689a5302482d678d66f6efb603f7bc542c89332b290208e316",
-      "bytes": 3906
+      "sha256": "6e346644a6c031282d11a2a51e9978a18301d9efbf49aa2707c532eaa27714c9",
+      "bytes": 5935
     },
     "/modulos/python/static/css/modulo.css": {
       "archivo": "recursos/modulos/python/static/css/modulo.css",
       "tipo": "text/css; charset=utf-8",
-      "sha256": "b15cf175eb403bdaafeac68abafa675f52f77d1d5763c1be16ab46d8e1d026b2",
-      "bytes": 971
+      "sha256": "2189ca25c8d8da677e3338c57e2453d0503f349403a518cd93c3f30b274dba54",
+      "bytes": 1400
     },
     "/modulos/docker/static/css/base_style.css": {
       "archivo": "recursos/modulos/docker/static/css/base_style.css",
       "tipo": "text/css; charset=utf-8",
-      "sha256": "99cbf8e30bf0f2689a5302482d678d66f6efb603f7bc542c89332b290208e316",
-      "bytes": 3906
+      "sha256": "6e346644a6c031282d11a2a51e9978a18301d9efbf49aa2707c532eaa27714c9",
+      "bytes": 5935
     },
     "/modulos/docker/static/css/style.css": {
       "archivo": "recursos/modulos/docker/static/css/style.css",
       "tipo": "text/css; charset=utf-8",
-      "sha256": "0eb198fe3222f40158b60b1ea93db3cc7f77b3e584fd0abfe7bf47e4a5ef375c",
-      "bytes": 1089
+      "sha256": "c7c95d8664d0be1038ff549c30617c290aedcf1dd8978dbdd8721feb4062f57a",
+      "bytes": 1207
     },
     "/modulos/git/static/css/base_style.css": {
       "archivo": "recursos/modulos/git/static/css/base_style.css",
       "tipo": "text/css; charset=utf-8",
-      "sha256": "99cbf8e30bf0f2689a5302482d678d66f6efb603f7bc542c89332b290208e316",
-      "bytes": 3906
+      "sha256": "6e346644a6c031282d11a2a51e9978a18301d9efbf49aa2707c532eaa27714c9",
+      "bytes": 5935
     },
     "/modulos/git/static/css/style.css": {
       "archivo": "recursos/modulos/git/static/css/style.css",
       "tipo": "text/css; charset=utf-8",
-      "sha256": "b097dbbf5c79bf700593ee43304c773a5dc226e028a5a3cbc76ba88211880246",
-      "bytes": 1055
+      "sha256": "fea3da837b913126bf850ecba32948c47b2da2acac7ef3075b68aea19ea9d136",
+      "bytes": 1234
     }
   }
 }

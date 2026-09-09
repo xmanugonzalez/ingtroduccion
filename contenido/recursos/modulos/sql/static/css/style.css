@@ -31,9 +31,10 @@
 
 .editor-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
+.editor-layout > * { min-width: 0; }
 @media (max-width: 900px) {
   .editor-layout { grid-template-columns: 1fr; }
 }
@@ -88,4 +89,10 @@ footer.footnote {
   color: var(--text-dim);
   font-size: 0.8rem;
   padding: 20px;
+}
+
+@media (max-width: 640px) {
+  .acciones { align-items: stretch; }
+  .acciones .btn { flex: 1 1 100%; }
+  footer.footnote { padding: 16px; }
 }

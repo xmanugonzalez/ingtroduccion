@@ -50,5 +50,13 @@ textarea.terminal {
 .lesson-nav {
   display: flex;
   justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
   margin-top: 20px;
+}
+
+@media (max-width: 640px) {
+  .actions-row { align-items: stretch; }
+  .actions-row .btn { flex: 1 1 100%; }
+  .terminal-wrap { padding: 8px; }
 }

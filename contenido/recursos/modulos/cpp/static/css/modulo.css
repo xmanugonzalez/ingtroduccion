@@ -47,6 +47,7 @@
 
 .toolbar {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin: 12px 0;
   align-items: center;
@@ -83,4 +84,9 @@ footer.hint {
   cursor: pointer;
   color: var(--text-dim);
   margin-bottom: 6px;
+}
+
+@media (max-width: 640px) {
+  .toolbar { align-items: stretch; }
+  .toolbar .btn { flex: 1 1 100%; }
 }

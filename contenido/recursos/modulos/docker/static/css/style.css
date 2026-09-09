@@ -37,3 +37,8 @@
 .breadcrumb a:hover { color: var(--accent); }
 
 .exercise-meta { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 0; }
+
+@media (max-width: 640px) {
+  .editor-actions { align-items: stretch; }
+  .editor-actions .btn { flex: 1 1 100%; }
+}
