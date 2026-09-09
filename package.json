@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "description": "Plataforma de cursos breves de introduccion a la informatica para la Universidad UNIDA.",
-  "engines": { "node": ">=24" },
+  "engines": { "node": "24.x" },
   "scripts": {
     "start": "node servidor.mjs",
     "test": "node --test"

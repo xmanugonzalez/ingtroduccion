@@ -97,3 +97,12 @@ test('los formularios pendientes no crean cuentas ni sesiones falsas', async () 
     assert.equal(respuesta.headers.get('set-cookie'), null);
   }
 });
+
+test('la configuracion de Vercel incluye el contenido y conserva las rutas', async () => {
+  const configuracion = JSON.parse(await readFile(new URL('../vercel.json', import.meta.url), 'utf8'));
+  assert.equal(configuracion.framework, null);
+  assert.equal(configuracion.functions['api/servidor.js'].includeFiles, 'contenido/**');
+  assert.deepEqual(configuracion.rewrites, [
+    { source: '/(.*)', destination: '/api/servidor?ruta=$1' },
+  ]);
+});

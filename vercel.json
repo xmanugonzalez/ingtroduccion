@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "functions": {
+    "api/servidor.js": {
+      "includeFiles": "contenido/**",
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/servidor?ruta=$1"
+    }
+  ]
+}
