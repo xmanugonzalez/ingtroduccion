@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos y DOM — HTML + JS</title>
+  <link rel="stylesheet" href="/modulos/html-js/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/html-js/static/css/style.css">
+  
+</head>
+<body>
+  <div class="navbar">
+    <a class="brand" href="/modulos/html-js/">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion <span>HTML + JS</span>
+    </a>
+    <div>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <a href="/modulos/html-js/">&larr; Todas las lecciones</a>
+  <h1>Lección 5: Eventos y DOM</h1>
+
+  <div class="card teoria">
+    
+        <p>El <strong>DOM</strong> (Document Object Model) es la representación en memoria
+        de la página que JavaScript puede leer y modificar.</p>
+        <pre class="console">&lt;button id="miBoton"&gt;Hacer clic&lt;/button&gt;
+&lt;p id="mensaje"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+  const boton = document.getElementById("miBoton");
+  const mensaje = document.getElementById("mensaje");
+
+  boton.addEventListener("click", function() {
+    mensaje.textContent = "¡Hiciste clic!";
+  });
+&lt;/script&gt;</pre>
+        <ul>
+          <li><code>document.getElementById("id")</code> busca un elemento por su id.</li>
+          <li><code>elemento.addEventListener("click", funcion)</code> ejecuta una función
+          cuando ocurre el evento (click, mouseover, etc.).</li>
+          <li><code>elemento.textContent = "..."</code> cambia el texto visible.</li>
+        </ul>
+        
+  </div>
+
+  <h2>Ejercicios</h2>
+  <div class="grid cols-2">
+    
+      <div class="card">
+        <h3>Botón con click</h3>
+        <p style="color: var(--text-dim);">Creá un &lt;button id="miBoton"&gt;, y con JavaScript usá getElementById y addEventListener('click', ...) para mostrar un mensaje.</p>
+        <a class="btn" href="/modulos/html-js/ejercicio/leccion5-ej1">Resolver</a>
+      </div>
+    
+      <div class="card">
+        <h3>Cambiar contenido del DOM</h3>
+        <p style="color: var(--text-dim);">Al hacer click en el botón, cambiá el textContent de un &lt;p&gt; usando una función propia (no una función anónima) conectada con addEventListener.</p>
+        <a class="btn" href="/modulos/html-js/ejercicio/leccion5-ej2">Resolver</a>
+      </div>
+    
+      <div class="card">
+        <h3>Contador de clics</h3>
+        <p style="color: var(--text-dim);">Implementá un contador: cada vez que se hace click en un botón, un número en pantalla aumenta en 1 (usá una variable let fuera de la función).</p>
+        <a class="btn" href="/modulos/html-js/ejercicio/leccion5-ej3">Resolver</a>
+      </div>
+    
+  </div>
+
+  </div>
+  <footer class="footnote">ing-troduccion — Introducción a HTML + JavaScript</footer>
+</body>
+</html>

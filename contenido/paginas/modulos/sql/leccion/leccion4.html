@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4. UPDATE y DELETE · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/sql/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/sql/static/css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="/modulos/sql/" class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion · <span>SQL Server</span>
+    </a>
+    <div>
+      
+      <a href="/" class="btn secondary" style="margin-left:10px;">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <p><a href="/modulos/sql/">&larr; Volver a lecciones</a></p>
+  <h1>4. UPDATE y DELETE</h1>
+  <div class="card teoria">
+    
+<p><code>UPDATE</code> modifica filas existentes. <strong>Siempre</strong> conviene
+usar <code>WHERE</code>, salvo que realmente se quiera modificar todas las filas:</p>
+<pre><code>UPDATE productos SET stock = stock - 1 WHERE id = 1;</code></pre>
+<p>Se pueden actualizar varias columnas a la vez separándolas con comas:</p>
+<pre><code>UPDATE productos SET precio = 99000, stock = 12 WHERE id = 2;</code></pre>
+<p><code>DELETE</code> borra filas completas. También necesita <code>WHERE</code>
+para no vaciar la tabla por accidente:</p>
+<pre><code>DELETE FROM productos WHERE id = 7;</code></pre>
+<p>Regla de oro: antes de correr un <code>UPDATE</code> o <code>DELETE</code>,
+probá el mismo <code>WHERE</code> con un <code>SELECT</code> para confirmar qué
+filas se van a ver afectadas. SQL Server te informa cuántas filas cambiaron.</p>
+<p>En estos ejercicios trabajás sobre tu propia copia de las tablas: podés usar
+el botón <em>Reiniciar datos</em> para volver al estado original.</p>
+
+  </div>
+
+  <h2>Ejercicios de esta lección</h2>
+  <div class="grid cols-2">
+    
+      <div class="card">
+        <strong>leccion4-ej1</strong> — Reponer stock
+        <div style="margin-top:10px;">
+          <a class="btn" href="/modulos/sql/ejercicio/leccion4-ej1">Practicar</a>
+        </div>
+      </div>
+    
+      <div class="card">
+        <strong>leccion4-ej2</strong> — Dar de baja un producto
+        <div style="margin-top:10px;">
+          <a class="btn" href="/modulos/sql/ejercicio/leccion4-ej2">Practicar</a>
+        </div>
+      </div>
+    
+  </div>
+
+  </div>
+  <footer class="footnote">Introducción a SQL Server · ing-troduccion</footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instrucciones comunes: FROM, RUN, COPY, CMD — Docker</title>
+<link rel="stylesheet" href="/modulos/docker/static/css/base_style.css">
+<link rel="stylesheet" href="/modulos/docker/static/css/style.css">
+</head>
+<body>
+<div class="navbar">
+  <a href="/modulos/docker/" class="brand">
+    <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+    ing-troduccion · <span>Docker</span>
+  </a>
+  <div>
+    <a href="/" class="btn secondary">Volver al central</a>
+  </div>
+</div>
+<div class="container">
+  
+<div class="breadcrumb"><a href="/modulos/docker/">Lecciones</a> / Instrucciones comunes: FROM, RUN, COPY, CMD</div>
+
+<h1>Instrucciones comunes: FROM, RUN, COPY, CMD</h1>
+
+<div class="card theory">
+  
+<h3>FROM</h3>
+<p>Define la imagen base. Siempre es la primera instrucción real del
+Dockerfile. Ejemplo: <code>FROM python:3.11</code>, <code>FROM node:20</code>,
+<code>FROM ubuntu:22.04</code>.</p>
+
+<h3>RUN</h3>
+<p>Ejecuta un comando <em>durante la construcción</em> de la imagen (por
+ejemplo, instalar dependencias). Cada RUN crea una nueva capa. Ejemplo:
+<code>RUN pip install -r requirements.txt</code>.</p>
+
+<h3>COPY</h3>
+<p>Copia archivos desde tu máquina (contexto de build) hacia el sistema de
+archivos de la imagen. Ejemplo: <code>COPY requirements.txt .</code> o
+<code>COPY . /app</code>.</p>
+<p>(ADD es similar a COPY pero además puede descomprimir archivos .tar y
+descargar URLs; en general se prefiere COPY salvo que necesites eso.)</p>
+
+<h3>CMD</h3>
+<p>Define el comando por defecto que se ejecuta <em>cuando se arranca un
+contenedor</em> a partir de la imagen (no durante el build). Solo puede haber
+un CMD efectivo por imagen. Se suele escribir en forma de lista (formato
+"exec"): <code>CMD ["python", "app.py"]</code>.</p>
+<p>Diferencia clave: RUN se ejecuta al construir la imagen; CMD se ejecuta al
+arrancar el contenedor.</p>
+
+<h3>Otras instrucciones útiles</h3>
+<ul>
+<li><code>WORKDIR /ruta</code>: fija el directorio de trabajo para las
+siguientes instrucciones.</li>
+<li><code>ENV NOMBRE=valor</code>: define una variable de entorno.</li>
+<li><code>EXPOSE puerto</code>: documenta qué puerto usa la app dentro del
+contenedor (no lo publica solo, eso lo hace <code>docker run -p</code>).</li>
+</ul>
+
+</div>
+
+<h2>Ejercicios</h2>
+<ul class="exercise-list">
+  
+  <li>
+    <a class="btn secondary" href="/modulos/docker/ejercicio/leccion3-ej1">
+      Instalar dependencias con RUN
+    </a>
+  </li>
+  
+  <li>
+    <a class="btn secondary" href="/modulos/docker/ejercicio/leccion3-ej2">
+      CMD en formato exec
+    </a>
+  </li>
+  
+  <li>
+    <a class="btn secondary" href="/modulos/docker/ejercicio/leccion3-ej3">
+      Comando: construir una imagen
+    </a>
+  </li>
+  
+</ul>
+
+</div>
+</body>
+</html>

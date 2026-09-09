@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ingresar — ing-troduccion</title>
+  <link rel="stylesheet" href="/static/css/base_style.css">
+  <style>
+    .modules-grid .card { text-decoration: none; display: block; color: var(--text); }
+    .icon-big { font-size: 1.6rem; margin-bottom: 6px; opacity: 0.85; }
+  </style>
+  
+</head>
+<body>
+  <div class="navbar">
+    <a class="brand" href="/">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing<span>-troduccion</span>
+    </a>
+    <div>
+      
+        <a class="btn secondary" href="/login">Ingresar</a>
+        <a class="btn" href="/register">Crear cuenta</a>
+      
+    </div>
+  </div>
+  <div class="container">
+    
+      
+    
+    
+<div class="card" style="max-width:420px; margin:40px auto;">
+  <h2>Ingresar</h2>
+  <form method="post">
+    <p><label>Usuario</label><input name="username" required autofocus></p>
+    <p><label>Contraseña</label><input type="password" name="password" required></p>
+    <button class="btn" type="submit" style="width:100%">Entrar</button>
+  </form>
+  <p style="margin-top:14px; color:var(--text-dim)">¿No tenés cuenta? <a href="/register">Creála acá</a></p>
+</div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrada y salida con cin y cout · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/cpp/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/cpp/static/css/modulo.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      <span>C++</span> · Introducción a C++
+    </div>
+    <div>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+      <a class="btn secondary" href="/modulos/cpp/">Inicio del módulo</a>
+    </div>
+  </div>
+  <div class="container">
+    
+<div class="card">
+  <p><a href="/modulos/cpp/">&larr; Todas las lecciones</a></p>
+  <h1>Lección 2: Entrada y salida con cin y cout</h1>
+  <div class="teoria">
+    
+<p><code>cout</code> (console output) imprime en pantalla usando el operador
+<code>&lt;&lt;</code>. <code>cin</code> (console input) lee lo que escribe el usuario
+usando el operador <code>&gt;&gt;</code>. Ambos viven en <code>&lt;iostream&gt;</code>.</p>
+
+<h3>Salida</h3>
+<pre><code>cout &lt;&lt; "Resultado: " &lt;&lt; 42 &lt;&lt; endl;</code></pre>
+
+<h3>Entrada</h3>
+<pre><code>int edad;
+cout &lt;&lt; "Ingresa tu edad: ";
+cin &gt;&gt; edad;
+cout &lt;&lt; "Tenes " &lt;&lt; edad &lt;&lt; " anios" &lt;&lt; endl;</code></pre>
+
+<p><code>cin &gt;&gt;</code> lee hasta el primer espacio en blanco. Para leer una línea
+completa con espacios (por ejemplo, un nombre compuesto) se usa
+<code>getline(cin, variable_string)</code>.</p>
+
+<pre><code>string nombre;
+cout &lt;&lt; "Como te llamas? ";
+getline(cin, nombre);
+cout &lt;&lt; "Hola, " &lt;&lt; nombre &lt;&lt; "!" &lt;&lt; endl;</code></pre>
+
+<p>Se pueden encadenar varias lecturas: <code>cin &gt;&gt; a &gt;&gt; b;</code> lee dos
+valores separados por espacio o salto de línea.</p>
+
+  </div>
+</div>
+
+<div class="card">
+  <h2>Ejercicios de esta lección</h2>
+  
+  <div class="ejercicio-list">
+    
+    <a class="btn" href="/modulos/cpp/ejercicio/leccion2-ej1">Saludo personalizado</a>
+    
+    <a class="btn" href="/modulos/cpp/ejercicio/leccion2-ej2">Suma de dos números</a>
+    
+  </div>
+  
+</div>
+
+<div class="toolbar">
+  
+    <a class="btn secondary" href="/modulos/cpp/leccion/1">&larr; Lección anterior</a>
+  
+  
+    <a class="btn secondary" href="/modulos/cpp/leccion/3">Lección siguiente &rarr;</a>
+  
+</div>
+
+  </div>
+</body>
+</html>

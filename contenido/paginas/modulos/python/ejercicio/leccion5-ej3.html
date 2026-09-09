@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filtrar pares - ing-troduccion</title>
+<link rel="stylesheet" href="/modulos/python/static/css/base_style.css">
+<link rel="stylesheet" href="/modulos/python/static/css/modulo.css">
+</head>
+<body>
+<div class="navbar">
+  <a class="brand" href="/modulos/python/">
+    <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+    ing<span>-troduccion</span> · Python
+  </a>
+  <div>
+    <a href="/modulos/python/">Inicio</a>
+    &nbsp;|&nbsp;
+    <a href="/">Volver al central</a>
+  </div>
+</div>
+<div class="container">
+
+<div class="top-links">
+  <a href="/modulos/python/leccion/leccion5">&larr; Volver a Funciones y listas</a>
+</div>
+<h1>Filtrar pares</h1>
+<div class="card enunciado">
+  <p>Dada la lista <code>numeros = [1, 2, 3, 4, 5, 6]</code>, definí una función <code>es_par(n)</code> que devuelva <code>True</code> si <code>n</code> es par. Usala para imprimir solo los números pares de la lista, uno por línea.</p>
+</div>
+
+<div class="card">
+  <textarea id="editor" class="code-editor" spellcheck="false">def es_par(n):
+    # completá
+    pass
+
+numeros = [1, 2, 3, 4, 5, 6]
+# imprimí solo los pares
+</textarea>
+  <div class="editor-actions">
+    <button class="btn" id="btn-ejecutar">Ejecutar</button>
+    
+  </div>
+  <div id="consola" class="console">Presioná "Ejecutar" para ver el resultado.</div>
+</div>
+
+<input type="hidden" id="ejercicio-id" value="leccion5-ej3">
+
+<script>
+const ejercicioId = document.getElementById('ejercicio-id').value;
+const editor = document.getElementById('editor');
+const consola = document.getElementById('consola');
+const btnEjecutar = document.getElementById('btn-ejecutar');
+const btnEntregar = document.getElementById('btn-entregar');
+
+function setConsola(texto, clase) {
+  consola.textContent = texto;
+  consola.className = 'console' + (clase ? ' ' + clase : '');
+}
+
+function renderResultado(data, entregado) {
+  let texto = '';
+  if (data.stdout) {
+    texto += data.stdout;
+    if (!texto.endsWith('\n')) texto += '\n';
+  }
+  if (data.stderr) {
+    texto += '--- stderr ---\n' + data.stderr;
+    if (!texto.endsWith('\n')) texto += '\n';
+  }
+  texto += '\n' + (data.mensaje || '');
+  if (entregado !== undefined) {
+    texto += entregado ? '\n\n(Entrega enviada al central)' : '\n\n(No se pudo enviar al central; se guardó localmente)';
+  }
+  setConsola(texto.trim(), data.ok ? 'ok' : 'error');
+}
+
+async function ejecutar(url) {
+  setConsola('Ejecutando...', '');
+  try {
+    const resp = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ codigo: editor.value, ejercicio_id: ejercicioId })
+    });
+    const data = await resp.json();
+    renderResultado(data, data.enviado);
+  } catch (err) {
+    setConsola('Error de red al contactar el servidor: ' + err, 'error');
+  }
+}
+
+btnEjecutar.addEventListener('click', () => ejecutar('/modulos/python/api/run'));
+if (btnEntregar) {
+  btnEntregar.addEventListener('click', () => ejecutar('/modulos/python/api/submit'));
+}
+</script>
+
+</div>
+</body>
+</html>

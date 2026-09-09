@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2. INSERT — cargar datos · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/sql/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/sql/static/css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="/modulos/sql/" class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion · <span>SQL Server</span>
+    </a>
+    <div>
+      
+      <a href="/" class="btn secondary" style="margin-left:10px;">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <p><a href="/modulos/sql/">&larr; Volver a lecciones</a></p>
+  <h1>2. INSERT — cargar datos</h1>
+  <div class="card teoria">
+    
+<p>Se cargan filas con <code>INSERT INTO</code>. Los textos van siempre entre
+<strong>comillas simples</strong>:</p>
+<pre><code>INSERT INTO productos (id, nombre, categoria, precio, stock)
+VALUES (13, 'Mousepad XL', 'Perifericos', 45000, 30);</code></pre>
+<p>Se pueden insertar varias filas en una sola sentencia separando los grupos de
+valores con comas:</p>
+<pre><code>INSERT INTO productos (id, nombre, categoria, precio, stock) VALUES
+(14, 'Cable HDMI 2m', 'Accesorios', 35000, 50),
+(15, 'Hub USB 4 puertos', 'Accesorios', 78000, 20);</code></pre>
+<p>Si se omiten columnas, esas quedan en <code>NULL</code> (o con su valor por
+defecto). Conviene listar siempre las columnas explícitamente, para que la
+sentencia no dependa del orden físico de la tabla.</p>
+<p>Si un texto lleva un apóstrofo, se duplica la comilla:
+<code>'Cable 3'' metros'</code>.</p>
+
+  </div>
+
+  <h2>Ejercicios de esta lección</h2>
+  <div class="grid cols-2">
+    
+      <div class="card">
+        <strong>leccion2-ej1</strong> — Insertar un producto
+        <div style="margin-top:10px;">
+          <a class="btn" href="/modulos/sql/ejercicio/leccion2-ej1">Practicar</a>
+        </div>
+      </div>
+    
+      <div class="card">
+        <strong>leccion2-ej2</strong> — Insertar varios productos de una vez
+        <div style="margin-top:10px;">
+          <a class="btn" href="/modulos/sql/ejercicio/leccion2-ej2">Practicar</a>
+        </div>
+      </div>
+    
+  </div>
+
+  </div>
+  <footer class="footnote">Introducción a SQL Server · ing-troduccion</footer>
+</body>
+</html>

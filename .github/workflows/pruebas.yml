@@ -1,0 +1,24 @@
+name: Verificar plataforma
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Obtener el codigo
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Preparar Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      # Las pruebas utilizan los archivos del proyecto sin servicios externos.
+      - name: Verificar integridad y servidor
+        run: npm test

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buenas prácticas y variables de entorno / puertos en el Dockerfile — Docker</title>
+<link rel="stylesheet" href="/modulos/docker/static/css/base_style.css">
+<link rel="stylesheet" href="/modulos/docker/static/css/style.css">
+</head>
+<body>
+<div class="navbar">
+  <a href="/modulos/docker/" class="brand">
+    <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+    ing-troduccion · <span>Docker</span>
+  </a>
+  <div>
+    <a href="/" class="btn secondary">Volver al central</a>
+  </div>
+</div>
+<div class="container">
+  
+<div class="breadcrumb"><a href="/modulos/docker/">Lecciones</a> / Buenas prácticas y variables de entorno / puertos en el Dockerfile</div>
+
+<h1>Buenas prácticas y variables de entorno / puertos en el Dockerfile</h1>
+
+<div class="card theory">
+  
+<p>Ya sabés armar un Dockerfile funcional. Ahora, algunas prácticas que hacen
+las imágenes más chicas, seguras y mantenibles.</p>
+
+<h3>ENV — variables de entorno</h3>
+<p>Definen variables de entorno disponibles dentro del contenedor, tanto en
+build como en runtime.</p>
+<pre>ENV PYTHONUNBUFFERED=1</pre>
+
+<h3>EXPOSE — documentar el puerto</h3>
+<p>Indica qué puerto usa la aplicación dentro del contenedor. Es
+documentación (no publica el puerto por sí solo; eso lo hace <code>docker run
+-p</code>).</p>
+<pre>EXPOSE 5000</pre>
+
+<h3>USER — no correr como root</h3>
+<p>Por defecto los contenedores corren como root. Por seguridad, es buena
+práctica crear y usar un usuario sin privilegios cuando sea posible.</p>
+<pre>USER appuser</pre>
+
+<h3>Orden de las capas (cache de build)</h3>
+<p>Docker cachea cada capa (instrucción). Conviene poner primero lo que cambia
+menos (por ejemplo, copiar <code>requirements.txt</code> e instalar
+dependencias) y al final lo que cambia más seguido (el código fuente). Así,
+si solo cambiás el código, Docker no tiene que reinstalar dependencias de
+nuevo.</p>
+
+<h3>.dockerignore</h3>
+<p>Igual que <code>.gitignore</code>, permite excluir archivos del contexto
+de build (por ejemplo <code>__pycache__</code>, <code>.git</code>, entornos
+virtuales) para imágenes más chicas y builds más rápidos.</p>
+
+<h3>docker-compose (introducción)</h3>
+<p>Cuando una aplicación necesita varios contenedores (por ejemplo, una app
+web + una base de datos), escribir todos los <code>docker run</code> a mano
+es tedioso. <strong>docker-compose</strong> permite describir todos los
+servicios en un único archivo YAML (<code>docker-compose.yml</code>) y
+levantarlos juntos con un solo comando: <code>docker compose up</code>.</p>
+<pre>
+version: "3.9"
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: ejemplo
+</pre>
+<p>Esto es solo una introducción conceptual: en este módulo no se validan
+archivos <code>docker-compose.yml</code>, pero es importante saber que existe
+y para qué sirve antes de seguir aprendiendo Docker en profundidad.</p>
+
+</div>
+
+<h2>Ejercicios</h2>
+<ul class="exercise-list">
+  
+  <li>
+    <a class="btn secondary" href="/modulos/docker/ejercicio/leccion5-ej1">
+      Dockerfile completo con buenas prácticas
+    </a>
+  </li>
+  
+  <li>
+    <a class="btn secondary" href="/modulos/docker/ejercicio/leccion5-ej2">
+      Correr un contenedor en background con nombre
+    </a>
+  </li>
+  
+</ul>
+
+</div>
+</body>
+</html>

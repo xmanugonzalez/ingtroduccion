@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1. CREATE TABLE y tipos de datos · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/sql/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/sql/static/css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="/modulos/sql/" class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion · <span>SQL Server</span>
+    </a>
+    <div>
+      
+      <a href="/" class="btn secondary" style="margin-left:10px;">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <p><a href="/modulos/sql/">&larr; Volver a lecciones</a></p>
+  <h1>1. CREATE TABLE y tipos de datos</h1>
+  <div class="card teoria">
+    
+<p>Una base de datos relacional organiza la información en <strong>tablas</strong>
+(filas y columnas). Para crear una tabla en SQL Server se usa
+<code>CREATE TABLE</code>, indicando el nombre de cada columna y su
+<strong>tipo de dato</strong>:</p>
+
+<pre><code>CREATE TABLE productos (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    precio DECIMAL(12,2),
+    stock INT
+);</code></pre>
+
+<p>Tipos de datos más usados en SQL Server:</p>
+<ul>
+<li><code>INT</code>: números enteros (también <code>BIGINT</code>, <code>SMALLINT</code>).</li>
+<li><code>DECIMAL(p,s)</code>: números con decimales exactos, con <em>p</em> dígitos
+en total y <em>s</em> decimales. <code>FLOAT</code> para decimales aproximados.</li>
+<li><code>VARCHAR(n)</code>: texto de hasta <em>n</em> caracteres.
+<code>NVARCHAR(n)</code> es lo mismo pero admite cualquier alfabeto (Unicode).</li>
+<li><code>DATE</code> y <code>DATETIME</code>: fechas y fechas con hora.</li>
+<li><code>BIT</code>: valores 0 / 1, el equivalente a un booleano.</li>
+</ul>
+
+<p>Restricciones que se pueden agregar a una columna:</p>
+<ul>
+<li><code>PRIMARY KEY</code>: identifica de forma única cada fila.</li>
+<li><code>NOT NULL</code>: obliga a que la columna siempre tenga un valor.</li>
+<li><code>IDENTITY(1,1)</code>: SQL Server genera el número solo, de a uno.</li>
+</ul>
+
+<p>Ojo con los tipos de otros motores: en SQL Server no existe <code>TEXT</code>
+como tipo recomendado (se usa <code>VARCHAR(n)</code>) ni
+<code>AUTOINCREMENT</code> (se usa <code>IDENTITY(1,1)</code>).</p>
+
+  </div>
+
+  <h2>Ejercicios de esta lección</h2>
+  <div class="grid cols-2">
+    
+      <div class="card">
+        <strong>leccion1-ej1</strong> — Crear la tabla productos
+        <div style="margin-top:10px;">
+          <a class="btn" href="/modulos/sql/ejercicio/leccion1-ej1">Practicar</a>
+        </div>
+      </div>
+    
+      <div class="card">
+        <strong>leccion1-ej2</strong> — Crear la tabla clientes
+        <div style="margin-top:10px;">
+          <a class="btn" href="/modulos/sql/ejercicio/leccion1-ej2">Practicar</a>
+        </div>
+      </div>
+    
+  </div>
+
+  </div>
+  <footer class="footnote">Introducción a SQL Server · ing-troduccion</footer>
+</body>
+</html>

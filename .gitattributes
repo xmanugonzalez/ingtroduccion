@@ -1,0 +1,3 @@
+# Conserva los bytes de los archivos tambien al clonar en Windows.
+# -text desactiva la conversion automatica de saltos de linea de Git.
+* -text

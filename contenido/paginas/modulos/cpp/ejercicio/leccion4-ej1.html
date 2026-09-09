@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suma de 1 a N con for · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/cpp/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/cpp/static/css/modulo.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      <span>C++</span> · Introducción a C++
+    </div>
+    <div>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+      <a class="btn secondary" href="/modulos/cpp/">Inicio del módulo</a>
+    </div>
+  </div>
+  <div class="container">
+    
+<div class="card">
+  <p><a href="/modulos/cpp/leccion/4">&larr; Volver a la lección 4</a></p>
+  <h1>Suma de 1 a N con for</h1>
+  <div class="enunciado">Leé un entero <code>n</code> y usando un <code>for</code> calculá la suma de todos los enteros de 1 a n.</div>
+</div>
+
+<div class="card editor-layout">
+  <label for="codigo"><strong>Tu código (C++):</strong></label>
+  <textarea id="codigo" class="code-editor" spellcheck="false">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n;
+    cin &gt;&gt; n;
+    int suma = 0;
+    // Completa el for
+
+    cout &lt;&lt; suma &lt;&lt; endl;
+    return 0;
+}
+</textarea>
+
+  <div class="toolbar">
+    <button id="btn-ejecutar" class="btn">Ejecutar</button>
+    
+    <span id="estado" class="badge"></span>
+  </div>
+
+  <label><strong>Consola:</strong></label>
+  <div id="consola" class="console">Presioná "Ejecutar" para ver el resultado acá.</div>
+  <footer class="hint">
+    ejercicio_id: <code>leccion4-ej1</code>
+  </footer>
+</div>
+
+<script>
+const ejercicioId = "leccion4-ej1";
+const btnEjecutar = document.getElementById('btn-ejecutar');
+const btnEntregar = document.getElementById('btn-entregar');
+const consola = document.getElementById('consola');
+const estado = document.getElementById('estado');
+const codigoEl = document.getElementById('codigo');
+
+// Tab inserta sangria (espacios) en vez de sacar el foco del editor, como en
+// un editor de codigo real. Shift+Tab saca sangria de la linea actual.
+codigoEl.addEventListener('keydown', function (e) {
+  if (e.key !== 'Tab') return;
+  e.preventDefault();
+
+  const valor = codigoEl.value;
+  const inicio = codigoEl.selectionStart;
+  const fin = codigoEl.selectionEnd;
+  const SANGRIA = '    ';
+
+  if (!e.shiftKey) {
+    codigoEl.value = valor.slice(0, inicio) + SANGRIA + valor.slice(fin);
+    codigoEl.selectionStart = codigoEl.selectionEnd = inicio + SANGRIA.length;
+    return;
+  }
+
+  // Shift+Tab: si la linea donde esta el cursor arranca con espacios, saca
+  // hasta 4.
+  const inicioLinea = valor.lastIndexOf('\n', inicio - 1) + 1;
+  const restoLinea = valor.slice(inicioLinea);
+  const m = restoLinea.match(/^ {1,4}/);
+  if (m) {
+    const cantidad = m[0].length;
+    codigoEl.value = valor.slice(0, inicioLinea) + valor.slice(inicioLinea + cantidad);
+    codigoEl.selectionStart = Math.max(inicioLinea, inicio - cantidad);
+    codigoEl.selectionEnd = Math.max(inicioLinea, fin - cantidad);
+  }
+});
+
+function irALinea(numero) {
+  const lineas = codigoEl.value.split('\n');
+  let posicion = 0;
+  for (let i = 0; i < numero - 1 && i < lineas.length; i++) {
+    posicion += lineas[i].length + 1;
+  }
+  const largoLinea = (lineas[numero - 1] || '').length;
+  codigoEl.focus();
+  codigoEl.setSelectionRange(posicion, posicion + largoLinea);
+
+  const estiloLinea = parseFloat(getComputedStyle(codigoEl).lineHeight) || 20;
+  codigoEl.scrollTop = Math.max(0, (numero - 3) * estiloLinea);
+}
+window.irALinea = irALinea;
+
+function pintarResultado(data, extra) {
+  consola.classList.remove('ok', 'error');
+  consola.classList.add(data.ok ? 'ok' : 'error');
+  consola.innerHTML = '';
+
+  const agregarBloque = (html) => {
+    const div = document.createElement('div');
+    div.innerHTML = html;
+    consola.appendChild(div);
+  };
+
+  if (data.mensaje) {
+    agregarBloque('<p class="consola-mensaje">' + escaparHtml(data.mensaje) + '</p>');
+  }
+
+  if (data.linea_error) {
+    agregarBloque(
+      '<p><a href="#" onclick="irALinea(' + data.linea_error + '); return false;">' +
+      '&#8594; Ir a la línea ' + data.linea_error + ' en tu código</a></p>'
+    );
+  }
+
+  if (data.ayuda && data.ayuda.length) {
+    let html = '<p><strong>Pistas para corregirlo:</strong></p><ul class="consola-ayuda">';
+    for (const tip of data.ayuda) {
+      html += '<li>' + escaparHtml(tip) + '</li>';
+    }
+    html += '</ul>';
+    agregarBloque(html);
+  }
+
+  if (data.stdout) {
+    agregarBloque('<p><strong>Salida de tu programa (stdout):</strong></p><pre class="consola-pre">' + escaparHtml(data.stdout) + '</pre>');
+  }
+
+  if (data.stderr) {
+    agregarBloque('<details class="consola-detalle"><summary>Detalle técnico del compilador</summary><pre class="consola-pre">' + escaparHtml(data.stderr) + '</pre></details>');
+  }
+
+  if (extra) {
+    agregarBloque('<p class="text-dim" style="color:var(--text-dim)">' + escaparHtml(extra) + '</p>');
+  }
+
+  if (!consola.textContent.trim()) {
+    consola.textContent = '(sin salida)';
+  }
+
+  estado.textContent = data.ok ? 'OK' : 'Error';
+  estado.className = 'badge ' + (data.ok ? 'ok' : 'error');
+}
+
+function escaparHtml(texto) {
+  const div = document.createElement('div');
+  div.textContent = texto;
+  return div.innerHTML;
+}
+
+async function llamar(endpoint) {
+  consola.textContent = 'Ejecutando...';
+  consola.classList.remove('ok', 'error');
+  try {
+    const resp = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ codigo: codigoEl.value, ejercicio_id: ejercicioId })
+    });
+    const data = await resp.json();
+    let extra = '';
+    if (endpoint === '/modulos/cpp/api/submit') {
+      extra = data.enviado ? '(entrega enviada al central)' : '(no se pudo enviar al central, pero tu resultado quedó guardado localmente)';
+    }
+    pintarResultado(data, extra);
+  } catch (err) {
+    consola.classList.add('error');
+    consola.textContent = 'Error de red al contactar el servidor: ' + err;
+    estado.textContent = 'Error';
+    estado.className = 'badge error';
+  }
+}
+
+btnEjecutar.addEventListener('click', () => llamar('/modulos/cpp/api/run'));
+if (btnEntregar) {
+  btnEntregar.addEventListener('click', () => llamar('/modulos/cpp/api/submit'));
+}
+</script>
+
+  </div>
+</body>
+</html>

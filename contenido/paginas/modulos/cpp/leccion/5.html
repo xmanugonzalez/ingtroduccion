@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funciones · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/cpp/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/cpp/static/css/modulo.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      <span>C++</span> · Introducción a C++
+    </div>
+    <div>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+      <a class="btn secondary" href="/modulos/cpp/">Inicio del módulo</a>
+    </div>
+  </div>
+  <div class="container">
+    
+<div class="card">
+  <p><a href="/modulos/cpp/">&larr; Todas las lecciones</a></p>
+  <h1>Lección 5: Funciones</h1>
+  <div class="teoria">
+    
+<p>Una función agrupa código reutilizable bajo un nombre. Se define con un tipo de
+retorno, un nombre y parámetros entre paréntesis.</p>
+<pre><code>int sumar(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int resultado = sumar(3, 4);
+    cout &lt;&lt; resultado &lt;&lt; endl; // 7
+    return 0;
+}</code></pre>
+
+<p>Si una función no devuelve nada, su tipo de retorno es <code>void</code>:</p>
+<pre><code>void saludar(string nombre) {
+    cout &lt;&lt; "Hola, " &lt;&lt; nombre &lt;&lt; "!" &lt;&lt; endl;
+}</code></pre>
+
+<p>Las funciones se pueden declarar antes de <code>main</code> (como en los ejemplos)
+o declararse arriba (prototipo) y definirse después. Usar funciones evita repetir
+código y ayuda a organizar el programa en piezas más pequeñas y entendibles.</p>
+
+<h3>Recursividad (opcional)</h3>
+<pre><code>int factorial(int n) {
+    if (n &lt;= 1) return 1;
+    return n * factorial(n - 1);
+}</code></pre>
+
+  </div>
+</div>
+
+<div class="card">
+  <h2>Ejercicios de esta lección</h2>
+  
+  <div class="ejercicio-list">
+    
+    <a class="btn" href="/modulos/cpp/ejercicio/leccion5-ej1">Función sumar</a>
+    
+    <a class="btn" href="/modulos/cpp/ejercicio/leccion5-ej2">Función esPrimo</a>
+    
+  </div>
+  
+</div>
+
+<div class="toolbar">
+  
+    <a class="btn secondary" href="/modulos/cpp/leccion/4">&larr; Lección anterior</a>
+  
+  
+    <a class="btn secondary" href="/modulos/cpp/leccion/6">Lección siguiente &rarr;</a>
+  
+</div>
+
+  </div>
+</body>
+</html>

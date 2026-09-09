@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funciones y listas - ing-troduccion</title>
+<link rel="stylesheet" href="/modulos/python/static/css/base_style.css">
+<link rel="stylesheet" href="/modulos/python/static/css/modulo.css">
+</head>
+<body>
+<div class="navbar">
+  <a class="brand" href="/modulos/python/">
+    <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+    ing<span>-troduccion</span> · Python
+  </a>
+  <div>
+    <a href="/modulos/python/">Inicio</a>
+    &nbsp;|&nbsp;
+    <a href="/">Volver al central</a>
+  </div>
+</div>
+<div class="container">
+
+<div class="top-links">
+  <a href="/modulos/python/">&larr; Volver a lecciones</a>
+</div>
+<h1>Funciones y listas</h1>
+<div class="card teoria">
+  
+        <p>Una <b>función</b> agrupa código reutilizable. Se define con <code>def</code>:</p>
+        <pre class="console">def saludar(nombre):
+    return "Hola, " + nombre
+
+print(saludar("Mundo"))</pre>
+        <p>Las <b>listas</b> son colecciones ordenadas y modificables:</p>
+        <pre class="console">numeros = [1, 2, 3]
+numeros.append(4)
+print(numeros)        # [1, 2, 3, 4]
+print(len(numeros))   # 4
+print(numeros[0])     # 1 (primer elemento)</pre>
+        <p>Se puede recorrer una lista con <code>for</code>:</p>
+        <pre class="console">for n in numeros:
+    print(n)</pre>
+        
+</div>
+
+<h2>Ejercicios</h2>
+<div class="ejercicio-list">
+  
+  <div class="ejercicio-row">
+    <span>Función cuadrado</span>
+    <a class="btn" href="/modulos/python/ejercicio/leccion5-ej1">Practicar</a>
+  </div>
+  
+  <div class="ejercicio-row">
+    <span>Suma de una lista</span>
+    <a class="btn" href="/modulos/python/ejercicio/leccion5-ej2">Practicar</a>
+  </div>
+  
+  <div class="ejercicio-row">
+    <span>Filtrar pares</span>
+    <a class="btn" href="/modulos/python/ejercicio/leccion5-ej3">Practicar</a>
+  </div>
+  
+</div>
+
+</div>
+</body>
+</html>

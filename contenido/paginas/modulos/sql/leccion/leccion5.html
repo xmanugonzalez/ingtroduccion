@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5. JOIN entre tablas · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/sql/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/sql/static/css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="/modulos/sql/" class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion · <span>SQL Server</span>
+    </a>
+    <div>
+      
+      <a href="/" class="btn secondary" style="margin-left:10px;">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <p><a href="/modulos/sql/">&larr; Volver a lecciones</a></p>
+  <h1>5. JOIN entre tablas</h1>
+  <div class="card teoria">
+    
+<p>Cuando los datos están repartidos en varias tablas relacionadas por una clave
+(por ejemplo <code>clientes</code> y <code>pedidos</code>, donde cada pedido tiene
+un <code>cliente_id</code>), se usa <code>INNER JOIN</code> para combinarlas:</p>
+<pre><code>SELECT clientes.nombre, pedidos.monto
+FROM pedidos
+INNER JOIN clientes ON pedidos.cliente_id = clientes.id;</code></pre>
+<p>El <code>INNER JOIN</code> (se puede escribir sólo <code>JOIN</code>) trae
+únicamente las filas que tienen coincidencia en ambas tablas. Se le puede agregar
+<code>WHERE</code> igual que a cualquier <code>SELECT</code>:</p>
+<pre><code>SELECT clientes.nombre, pedidos.monto
+FROM pedidos
+INNER JOIN clientes ON pedidos.cliente_id = clientes.id
+WHERE pedidos.monto &gt; 500000;</code></pre>
+<p>Cuando dos tablas tienen columnas con el mismo nombre (como <code>id</code>),
+hay que anteponer la tabla (<code>clientes.id</code>) para que SQL Server sepa a
+cuál te referís. También se pueden usar alias para escribir menos:</p>
+<pre><code>SELECT c.nombre, p.monto
+FROM pedidos AS p
+INNER JOIN clientes AS c ON p.cliente_id = c.id;</code></pre>
+
+  </div>
+
+  <h2>Ejercicios de esta lección</h2>
+  <div class="grid cols-2">
+    
+      <div class="card">
+        <strong>leccion5-ej1</strong> — Clientes con sus pedidos
+        <div style="margin-top:10px;">
+          <a class="btn" href="/modulos/sql/ejercicio/leccion5-ej1">Practicar</a>
+        </div>
+      </div>
+    
+      <div class="card">
+        <strong>leccion5-ej2</strong> — Las mejores notas con el nombre del alumno
+        <div style="margin-top:10px;">
+          <a class="btn" href="/modulos/sql/ejercicio/leccion5-ej2">Practicar</a>
+        </div>
+      </div>
+    
+  </div>
+
+  </div>
+  <footer class="footnote">Introducción a SQL Server · ing-troduccion</footer>
+</body>
+</html>

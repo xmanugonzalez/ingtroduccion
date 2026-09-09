@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lección 4 — Ramas: git branch, checkout y switch</title>
+  <link rel="stylesheet" href="/modulos/git/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/git/static/css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion <span>/ Git</span>
+    </div>
+    <div>
+      
+        <span class="badge">modo local</span>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <a href="/modulos/git/">&larr; Todas las lecciones</a>
+  <h1>Lección 4: Ramas: git branch, checkout y switch</h1>
+
+  <div class="card lesson-content">
+    
+<p>Una <strong>rama</strong> (branch) es una línea de desarrollo independiente
+dentro del mismo repositorio. Te permite probar cosas nuevas o desarrollar una
+funcionalidad sin afectar la rama principal (normalmente <code>main</code>)
+hasta que esté lista.</p>
+
+<p>Para crear una rama nueva a partir de la rama actual:</p>
+<pre>git branch feature</pre>
+
+<p>Para ver todas las ramas del repositorio (la actual aparece marcada con
+<code>*</code>):</p>
+<pre>git branch</pre>
+
+<p>Para moverte a otra rama existente podés usar el comando moderno
+<code>git switch</code>, o el más clásico <code>git checkout</code>:</p>
+<pre>git switch feature
+git checkout feature</pre>
+
+<p>También podés crear y moverte a una rama nueva en un solo paso con
+<code>git switch -c nombre</code> o <code>git checkout -b nombre</code>.</p>
+
+  </div>
+
+  <div class="card exercise-list">
+    <h3>Ejercicios</h3>
+    
+      <a class="btn secondary" href="/modulos/git/ejercicio/leccion4-ej1">Crear una rama</a>
+    
+      <a class="btn secondary" href="/modulos/git/ejercicio/leccion4-ej2">Moverse entre ramas</a>
+    
+  </div>
+
+  <div class="lesson-nav">
+    
+      <a class="btn secondary" href="/modulos/git/leccion/3">&larr; Lección anterior</a>
+    
+    
+      <a class="btn" href="/modulos/git/leccion/5">Siguiente lección &rarr;</a>
+    
+  </div>
+
+  </div>
+</body>
+</html>

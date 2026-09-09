@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suma con input - ing-troduccion</title>
+<link rel="stylesheet" href="/modulos/python/static/css/base_style.css">
+<link rel="stylesheet" href="/modulos/python/static/css/modulo.css">
+</head>
+<body>
+<div class="navbar">
+  <a class="brand" href="/modulos/python/">
+    <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+    ing<span>-troduccion</span> · Python
+  </a>
+  <div>
+    <a href="/modulos/python/">Inicio</a>
+    &nbsp;|&nbsp;
+    <a href="/">Volver al central</a>
+  </div>
+</div>
+<div class="container">
+
+<div class="top-links">
+  <a href="/modulos/python/leccion/leccion2">&larr; Volver a Entrada, salida y operadores</a>
+</div>
+<h1>Suma con input</h1>
+<div class="card enunciado">
+  <p>Leé dos números con <code>input()</code>, convertilos a <code>int</code> y mostrá su suma con <code>print()</code>. Ejemplo: si se ingresa 3 y 4, debe imprimir 7.</p>
+</div>
+
+<div class="card">
+  <textarea id="editor" class="code-editor" spellcheck="false">a = int(input())
+b = int(input())
+# imprimí la suma
+</textarea>
+  <div class="editor-actions">
+    <button class="btn" id="btn-ejecutar">Ejecutar</button>
+    
+  </div>
+  <div id="consola" class="console">Presioná "Ejecutar" para ver el resultado.</div>
+</div>
+
+<input type="hidden" id="ejercicio-id" value="leccion2-ej1">
+
+<script>
+const ejercicioId = document.getElementById('ejercicio-id').value;
+const editor = document.getElementById('editor');
+const consola = document.getElementById('consola');
+const btnEjecutar = document.getElementById('btn-ejecutar');
+const btnEntregar = document.getElementById('btn-entregar');
+
+function setConsola(texto, clase) {
+  consola.textContent = texto;
+  consola.className = 'console' + (clase ? ' ' + clase : '');
+}
+
+function renderResultado(data, entregado) {
+  let texto = '';
+  if (data.stdout) {
+    texto += data.stdout;
+    if (!texto.endsWith('\n')) texto += '\n';
+  }
+  if (data.stderr) {
+    texto += '--- stderr ---\n' + data.stderr;
+    if (!texto.endsWith('\n')) texto += '\n';
+  }
+  texto += '\n' + (data.mensaje || '');
+  if (entregado !== undefined) {
+    texto += entregado ? '\n\n(Entrega enviada al central)' : '\n\n(No se pudo enviar al central; se guardó localmente)';
+  }
+  setConsola(texto.trim(), data.ok ? 'ok' : 'error');
+}
+
+async function ejecutar(url) {
+  setConsola('Ejecutando...', '');
+  try {
+    const resp = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ codigo: editor.value, ejercicio_id: ejercicioId })
+    });
+    const data = await resp.json();
+    renderResultado(data, data.enviado);
+  } catch (err) {
+    setConsola('Error de red al contactar el servidor: ' + err, 'error');
+  }
+}
+
+btnEjecutar.addEventListener('click', () => ejecutar('/modulos/python/api/run'));
+if (btnEntregar) {
+  btnEntregar.addEventListener('click', () => ejecutar('/modulos/python/api/submit'));
+}
+</script>
+
+</div>
+</body>
+</html>

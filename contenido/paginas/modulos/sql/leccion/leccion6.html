@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6. GROUP BY, ORDER BY y TOP · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/sql/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/sql/static/css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="/modulos/sql/" class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion · <span>SQL Server</span>
+    </a>
+    <div>
+      
+      <a href="/" class="btn secondary" style="margin-left:10px;">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <p><a href="/modulos/sql/">&larr; Volver a lecciones</a></p>
+  <h1>6. GROUP BY, ORDER BY y TOP</h1>
+  <div class="card teoria">
+    
+<p><code>ORDER BY</code> ordena el resultado:</p>
+<pre><code>SELECT * FROM pedidos ORDER BY monto DESC;</code></pre>
+<p>Para quedarte sólo con las primeras filas, SQL Server usa <code>TOP N</code>
+justo después del <code>SELECT</code> (no existe <code>LIMIT</code>):</p>
+<pre><code>SELECT TOP 3 id, monto FROM pedidos ORDER BY monto DESC;</code></pre>
+<p><code>GROUP BY</code> agrupa filas que comparten un valor y permite calcular
+funciones de agregación por grupo: <code>COUNT</code>, <code>SUM</code>,
+<code>AVG</code>, <code>MIN</code>, <code>MAX</code>:</p>
+<pre><code>SELECT cliente_id, COUNT(*) AS cantidad
+FROM pedidos
+GROUP BY cliente_id;</code></pre>
+<p>Toda columna que aparezca en el <code>SELECT</code> y no esté dentro de una
+función de agregación tiene que estar también en el <code>GROUP BY</code>.</p>
+<p>Para filtrar los <em>grupos</em> resultantes (no las filas individuales) se usa
+<code>HAVING</code> en vez de <code>WHERE</code>:</p>
+<pre><code>SELECT cliente_id, SUM(monto) AS total
+FROM pedidos
+GROUP BY cliente_id
+HAVING SUM(monto) &gt; 1000000;</code></pre>
+
+  </div>
+
+  <h2>Ejercicios de esta lección</h2>
+  <div class="grid cols-2">
+    
+      <div class="card">
+        <strong>leccion6-ej1</strong> — Cantidad de pedidos por cliente
+        <div style="margin-top:10px;">
+          <a class="btn" href="/modulos/sql/ejercicio/leccion6-ej1">Practicar</a>
+        </div>
+      </div>
+    
+      <div class="card">
+        <strong>leccion6-ej2</strong> — Los 3 pedidos más grandes
+        <div style="margin-top:10px;">
+          <a class="btn" href="/modulos/sql/ejercicio/leccion6-ej2">Practicar</a>
+        </div>
+      </div>
+    
+      <div class="card">
+        <strong>leccion6-ej3</strong> — Clientes que gastaron más de 1.000.000 en total
+        <div style="margin-top:10px;">
+          <a class="btn" href="/modulos/sql/ejercicio/leccion6-ej3">Practicar</a>
+        </div>
+      </div>
+    
+  </div>
+
+  </div>
+  <footer class="footnote">Introducción a SQL Server · ing-troduccion</footer>
+</body>
+</html>

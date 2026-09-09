@@ -1,0 +1,135 @@
+/* base_style.css — variables comunes. Diseño plano en blanco/negro/gris, sin
+   bordes redondeados, sombras ni color: el feedback de correcto/incorrecto se
+   distingue por texto y por estilo de borde (sólido vs. punteado), no por color. */
+:root {
+  --bg: #ffffff;
+  --bg-panel: #ffffff;
+  --bg-panel-2: #f0f0f0;
+  --border: #cccccc;
+  --border-strong: #000000;
+  --text: #111111;
+  --text-dim: #555555;
+  --accent: #000000;
+  --radius: 0px;
+  --font: Arial, Helvetica, "Segoe UI", sans-serif;
+  --font-mono: "Consolas", "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+a { color: var(--text); text-decoration: underline; }
+a:hover { color: #000000; }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: var(--bg);
+  border-bottom: 2px solid var(--border-strong);
+}
+
+.navbar .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; color: var(--text); text-decoration: none; }
+.navbar .brand img { height: 28px; width: auto; display: block; }
+.navbar .brand span { color: var(--text); }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+
+.card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.card:hover { border-color: var(--border-strong); }
+
+.btn {
+  display: inline-block;
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: var(--radius);
+  padding: 9px 16px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn:hover { background: #222222; text-decoration: none; }
+.btn.secondary { background: #ffffff; border: 1px solid #000000; color: #000000; }
+.btn.secondary:hover { background: #f0f0f0; }
+.btn.ok { background: #ffffff; color: #000000; border: 2px solid #000000; }
+.btn.danger { background: #ffffff; color: #000000; border: 2px dashed #000000; }
+
+input, textarea, select {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: var(--radius);
+  padding: 9px 12px;
+  font-family: var(--font);
+  font-size: 0.95rem;
+  width: 100%;
+}
+input:focus, textarea:focus, select:focus { outline: 2px solid #000000; outline-offset: -1px; }
+
+textarea.code-editor {
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  min-height: 260px;
+  white-space: pre;
+  tab-size: 4;
+  background: #fafafa;
+}
+
+.console {
+  background: #fafafa;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  white-space: pre-wrap;
+  min-height: 90px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+/* Correcto/incorrecto se distingue por el estilo de borde, no por color. */
+.console.ok { border: 2px solid #000000; }
+.console.error { border: 2px dashed #000000; }
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: var(--radius);
+  background: #ffffff;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.badge.ok { border: 2px solid #000000; font-weight: 700; }
+.badge.error { border: 2px dashed #000000; font-weight: 700; }
+
+.grid { display: grid; gap: 16px; }
+.grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 800px) {
+  .grid.cols-2, .grid.cols-3 { grid-template-columns: 1fr; }
+}
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+th { border-bottom: 2px solid var(--border-strong); font-weight: 700; }
+
+.flash { padding: 10px 14px; border-radius: var(--radius); margin-bottom: 14px; border: 1px solid var(--border-strong); }
+.flash.error { border-style: dashed; }
+.flash.ok { border-style: solid; }

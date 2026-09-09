@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comando: correr un contenedor publicando un puerto — Docker</title>
+<link rel="stylesheet" href="/modulos/docker/static/css/base_style.css">
+<link rel="stylesheet" href="/modulos/docker/static/css/style.css">
+</head>
+<body>
+<div class="navbar">
+  <a href="/modulos/docker/" class="brand">
+    <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+    ing-troduccion · <span>Docker</span>
+  </a>
+  <div>
+    <a href="/" class="btn secondary">Volver al central</a>
+  </div>
+</div>
+<div class="container">
+  
+<div class="breadcrumb">
+  <a href="/modulos/docker/">Lecciones</a> /
+  <a href="/modulos/docker/leccion/leccion4">Comandos básicos de la CLI de Docker</a> /
+  Comando: correr un contenedor publicando un puerto
+</div>
+
+<h1>Comando: correr un contenedor publicando un puerto</h1>
+
+<div class="card">
+  <p>Escribí el comando para correr un contenedor a partir de la imagen <code>mi-app</code>, publicando el puerto 5000 del contenedor en el puerto 5000 del host.</p>
+  
+  <p class="exercise-meta">Se valida la sintaxis del comando contra el formato esperado.</p>
+  
+</div>
+
+<div class="card">
+  <textarea id="codigo" class="code-editor" spellcheck="false"></textarea>
+
+  <div class="editor-actions">
+    <button id="btn-run" class="btn">Ejecutar / Validar</button>
+    
+    <span id="estado" class="badge"></span>
+  </div>
+
+  <div id="consola" class="console">Presioná "Ejecutar / Validar" para revisar tu código.</div>
+
+  <div class="help-box">
+    <details>
+      <summary>Ver ayuda</summary>
+      <p>docker run -p 5000:5000 mi-app</p>
+    </details>
+  </div>
+</div>
+
+<script>
+const ejercicioId = "leccion4-ej1";
+const consola_ = document.getElementById('consola');
+const estado = document.getElementById('estado');
+
+function pintarResultado(data) {
+  consola_.classList.remove('ok', 'error');
+  let texto = '';
+  if (data.stdout) texto += data.stdout + '\n';
+  if (data.stderr) texto += data.stderr + '\n';
+  texto += (data.mensaje || '');
+  if (data.linea_error) {
+    texto += `\n(línea con error: ${data.linea_error})`;
+  }
+  consola_.textContent = texto.trim();
+  if (data.ok) {
+    consola_.classList.add('ok');
+    estado.textContent = 'OK';
+    estado.className = 'badge ok';
+  } else {
+    consola_.classList.add('error');
+    estado.textContent = 'Error';
+    estado.className = 'badge error';
+  }
+  if (typeof data.enviado !== 'undefined') {
+    estado.textContent += data.enviado ? ' · Entregado' : ' · No entregado al central';
+  }
+}
+
+async function llamar(endpoint) {
+  const codigo = document.getElementById('codigo').value;
+  estado.textContent = 'Ejecutando...';
+  estado.className = 'badge';
+  try {
+    const resp = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ codigo: codigo, ejercicio_id: ejercicioId }),
+    });
+    const data = await resp.json();
+    pintarResultado(data);
+  } catch (e) {
+    consola_.classList.add('error');
+    consola_.textContent = 'Error de red al contactar el servidor: ' + e;
+    estado.textContent = 'Error';
+    estado.className = 'badge error';
+  }
+}
+
+document.getElementById('btn-run').addEventListener('click', () => llamar('/modulos/docker/api/run'));
+const btnSubmit = document.getElementById('btn-submit');
+if (btnSubmit) {
+  btnSubmit.addEventListener('click', () => llamar('/modulos/docker/api/submit'));
+}
+</script>
+
+</div>
+</body>
+</html>

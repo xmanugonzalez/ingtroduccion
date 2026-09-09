@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elementos y atributos — HTML + JS</title>
+  <link rel="stylesheet" href="/modulos/html-js/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/html-js/static/css/style.css">
+  
+</head>
+<body>
+  <div class="navbar">
+    <a class="brand" href="/modulos/html-js/">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion <span>HTML + JS</span>
+    </a>
+    <div>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <a href="/modulos/html-js/">&larr; Todas las lecciones</a>
+  <h1>Lección 2: Elementos y atributos</h1>
+
+  <div class="card teoria">
+    
+        <p>Los <strong>atributos</strong> agregan información extra a una etiqueta, dentro
+        de la etiqueta de apertura: <code>&lt;a href="https://ejemplo.com"&gt;link&lt;/a&gt;</code>.</p>
+        <ul>
+          <li><code>&lt;p&gt;</code> párrafo de texto.</li>
+          <li><code>&lt;ul&gt;</code>/<code>&lt;ol&gt;</code> con <code>&lt;li&gt;</code> para listas.</li>
+          <li><code>&lt;a href="..."&gt;</code> enlaces.</li>
+          <li><code>&lt;img src="..." alt="..."&gt;</code> imágenes (etiqueta vacía).</li>
+          <li><code>id="..."</code> identifica un único elemento (útil para JS/CSS).</li>
+          <li><code>class="..."</code> agrupa elementos para darles el mismo estilo.</li>
+        </ul>
+        <p>Ejemplo:</p>
+        <pre class="console">&lt;ul id="lista"&gt;
+  &lt;li class="item"&gt;Uno&lt;/li&gt;
+  &lt;li class="item"&gt;Dos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a href="https://developer.mozilla.org"&gt;MDN&lt;/a&gt;</pre>
+        
+  </div>
+
+  <h2>Ejercicios</h2>
+  <div class="grid cols-2">
+    
+      <div class="card">
+        <h3>Lista de tareas</h3>
+        <p style="color: var(--text-dim);">Creá una lista &lt;ul&gt; con al menos tres &lt;li&gt; con tareas pendientes.</p>
+        <a class="btn" href="/modulos/html-js/ejercicio/leccion2-ej1">Resolver</a>
+      </div>
+    
+      <div class="card">
+        <h3>Enlace e imagen</h3>
+        <p style="color: var(--text-dim);">Agregá un &lt;a href="..."&gt; a un sitio y una &lt;img src="..." alt="..."&gt;.</p>
+        <a class="btn" href="/modulos/html-js/ejercicio/leccion2-ej2">Resolver</a>
+      </div>
+    
+      <div class="card">
+        <h3>id y class</h3>
+        <p style="color: var(--text-dim);">Creá un &lt;div&gt; con id="principal" que contenga un &lt;p class="nota"&gt;.</p>
+        <a class="btn" href="/modulos/html-js/ejercicio/leccion2-ej3">Resolver</a>
+      </div>
+    
+  </div>
+
+  </div>
+  <footer class="footnote">ing-troduccion — Introducción a HTML + JavaScript</footer>
+</body>
+</html>

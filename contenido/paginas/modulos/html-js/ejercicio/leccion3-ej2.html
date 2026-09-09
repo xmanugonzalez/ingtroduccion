@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estilo interno — HTML + JS</title>
+  <link rel="stylesheet" href="/modulos/html-js/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/html-js/static/css/style.css">
+  
+</head>
+<body>
+  <div class="navbar">
+    <a class="brand" href="/modulos/html-js/">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion <span>HTML + JS</span>
+    </a>
+    <div>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <a href="/modulos/html-js/leccion/3">&larr; Volver a la lección 3</a>
+  <h1>Estilo interno</h1>
+
+  <div class="enunciado">Agregá un &lt;style&gt; en el &lt;head&gt; que defina un estilo para la clase .destacado y usala en algún elemento.</div>
+
+  <div class="editor-layout">
+    <div class="editor-col">
+      <label>Tu código (HTML + CSS + JS en un solo documento)</label>
+      <textarea id="editor" class="code-editor" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+
+      <div class="toolbar">
+        <button id="btnEjecutar" class="btn">Ejecutar</button>
+        
+          <span class="badge" title="Solo disponible si venís de una tarea asignada desde el central">
+            Entrega deshabilitada (modo práctica libre)
+          </span>
+        
+      </div>
+
+      <label>Consola</label>
+      <div id="consola" class="console">Presioná "Ejecutar" para ver el resultado.</div>
+    </div>
+
+    <div class="preview-col">
+      <label>Preview</label>
+      <iframe id="preview" class="preview-frame" sandbox="allow-scripts"></iframe>
+    </div>
+  </div>
+
+  <script>
+    const editor = document.getElementById("editor");
+    const preview = document.getElementById("preview");
+    const consola = document.getElementById("consola");
+    const btnEjecutar = document.getElementById("btnEjecutar");
+    const btnEntregar = document.getElementById("btnEntregar");
+    const EJERCICIO_ID = "leccion3-ej2";
+
+    function renderPreview(codigo) {
+      // Render 100% en el navegador, sin pegarle al servidor: usamos srcdoc
+      // sobre un iframe sandboxeado (allow-scripts, sin allow-same-origin).
+      preview.srcdoc = codigo;
+    }
+
+    function mostrarConsola(resultado) {
+      consola.classList.remove("ok", "error");
+      let texto = resultado.mensaje || "";
+      if (resultado.stderr) {
+        texto += "\n\n" + resultado.stderr;
+      }
+      if (resultado.linea_error) {
+        texto += "\n(línea aproximada: " + resultado.linea_error + ")";
+      }
+      if (typeof resultado.enviado === "boolean") {
+        texto += resultado.enviado
+          ? "\n\nEntrega enviada al central correctamente."
+          : "\n\n(No se pudo confirmar el envío al central; puede que esté apagado. Se guardó localmente si correspondía.)";
+      }
+      consola.textContent = texto;
+      consola.classList.add(resultado.ok ? "ok" : "error");
+    }
+
+    async function ejecutar(endpoint) {
+      const codigo = editor.value;
+      renderPreview(codigo);
+      consola.textContent = "Validando...";
+      consola.classList.remove("ok", "error");
+      try {
+        const resp = await fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ codigo: codigo, ejercicio_id: EJERCICIO_ID }),
+        });
+        const data = await resp.json();
+        mostrarConsola(data);
+        return data;
+      } catch (err) {
+        consola.textContent = "No se pudo contactar al servidor: " + err;
+        consola.classList.add("error");
+      }
+    }
+
+    btnEjecutar.addEventListener("click", () => ejecutar("/modulos/html-js/api/run"));
+    if (btnEntregar) {
+      btnEntregar.addEventListener("click", () => ejecutar("/modulos/html-js/api/submit"));
+    }
+
+    // Primer render automático al cargar la página.
+    renderPreview(editor.value);
+  </script>
+
+  </div>
+  <footer class="footnote">ing-troduccion — Introducción a HTML + JavaScript</footer>
+</body>
+</html>

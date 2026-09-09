@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Condicionales: if / else · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/cpp/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/cpp/static/css/modulo.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      <span>C++</span> · Introducción a C++
+    </div>
+    <div>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+      <a class="btn secondary" href="/modulos/cpp/">Inicio del módulo</a>
+    </div>
+  </div>
+  <div class="container">
+    
+<div class="card">
+  <p><a href="/modulos/cpp/">&larr; Todas las lecciones</a></p>
+  <h1>Lección 3: Condicionales: if / else</h1>
+  <div class="teoria">
+    
+<p>Los condicionales permiten ejecutar distinto código según si una expresión es
+verdadera o falsa.</p>
+<pre><code>int n = 7;
+if (n % 2 == 0) {
+    cout &lt;&lt; n &lt;&lt; " es par" &lt;&lt; endl;
+} else {
+    cout &lt;&lt; n &lt;&lt; " es impar" &lt;&lt; endl;
+}</code></pre>
+
+<h3>Operadores de comparación</h3>
+<table>
+<tr><th>Operador</th><th>Significado</th></tr>
+<tr><td><code>==</code></td><td>igual a</td></tr>
+<tr><td><code>!=</code></td><td>distinto de</td></tr>
+<tr><td><code>&gt;</code>, <code>&lt;</code></td><td>mayor/menor que</td></tr>
+<tr><td><code>&gt;=</code>, <code>&lt;=</code></td><td>mayor/menor o igual</td></tr>
+</table>
+
+<h3>Encadenando condiciones</h3>
+<pre><code>if (a &gt; b) {
+    cout &lt;&lt; "a es mayor" &lt;&lt; endl;
+} else if (a &lt; b) {
+    cout &lt;&lt; "b es mayor" &lt;&lt; endl;
+} else {
+    cout &lt;&lt; "son iguales" &lt;&lt; endl;
+}</code></pre>
+
+<p>También existen los operadores lógicos <code>&amp;&amp;</code> (Y), <code>||</code> (O)
+y <code>!</code> (NO), útiles para combinar condiciones: <code>if (edad &gt;= 18 &amp;&amp;
+tiene_dni) { ... }</code>.</p>
+
+  </div>
+</div>
+
+<div class="card">
+  <h2>Ejercicios de esta lección</h2>
+  
+  <div class="ejercicio-list">
+    
+    <a class="btn" href="/modulos/cpp/ejercicio/leccion3-ej1">Par o impar</a>
+    
+    <a class="btn" href="/modulos/cpp/ejercicio/leccion3-ej2">El mayor de dos números</a>
+    
+  </div>
+  
+</div>
+
+<div class="toolbar">
+  
+    <a class="btn secondary" href="/modulos/cpp/leccion/2">&larr; Lección anterior</a>
+  
+  
+    <a class="btn secondary" href="/modulos/cpp/leccion/4">Lección siguiente &rarr;</a>
+  
+</div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arrays y vectores básicos · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/cpp/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/cpp/static/css/modulo.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      <span>C++</span> · Introducción a C++
+    </div>
+    <div>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+      <a class="btn secondary" href="/modulos/cpp/">Inicio del módulo</a>
+    </div>
+  </div>
+  <div class="container">
+    
+<div class="card">
+  <p><a href="/modulos/cpp/">&larr; Todas las lecciones</a></p>
+  <h1>Lección 6: Arrays y vectores básicos</h1>
+  <div class="teoria">
+    
+<p>Un <strong>array</strong> es una colección de tamaño fijo de elementos del mismo
+tipo.</p>
+<pre><code>int numeros[5] = {10, 20, 30, 40, 50};
+for (int i = 0; i &lt; 5; i++) {
+    cout &lt;&lt; numeros[i] &lt;&lt; " ";
+}
+cout &lt;&lt; endl;</code></pre>
+<p>Los índices arrancan en <code>0</code>: <code>numeros[0]</code> es el primer
+elemento.</p>
+
+<h3>vector (tamaño dinámico)</h3>
+<p>Requiere <code>#include &lt;vector&gt;</code>. A diferencia del array, un
+<code>vector</code> puede crecer y achicarse en tiempo de ejecución.</p>
+<pre><code>#include &lt;vector&gt;
+using namespace std;
+
+vector&lt;int&gt; lista;
+lista.push_back(1);
+lista.push_back(2);
+lista.push_back(3);
+
+for (int i = 0; i &lt; lista.size(); i++) {
+    cout &lt;&lt; lista[i] &lt;&lt; " ";
+}
+cout &lt;&lt; endl;
+
+// forma moderna de recorrer (range-based for):
+for (int x : lista) {
+    cout &lt;&lt; x &lt;&lt; " ";
+}</code></pre>
+
+<p><code>lista.size()</code> devuelve la cantidad de elementos actuales,
+<code>lista.push_back(valor)</code> agrega un elemento al final.</p>
+
+  </div>
+</div>
+
+<div class="card">
+  <h2>Ejercicios de esta lección</h2>
+  
+  <div class="ejercicio-list">
+    
+    <a class="btn" href="/modulos/cpp/ejercicio/leccion6-ej1">Suma de un array</a>
+    
+    <a class="btn" href="/modulos/cpp/ejercicio/leccion6-ej2">Vector dinámico</a>
+    
+  </div>
+  
+</div>
+
+<div class="toolbar">
+  
+    <a class="btn secondary" href="/modulos/cpp/leccion/5">&larr; Lección anterior</a>
+  
+  
+</div>
+
+  </div>
+</body>
+</html>

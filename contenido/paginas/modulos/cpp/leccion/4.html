@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bucles: for y while · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/cpp/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/cpp/static/css/modulo.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      <span>C++</span> · Introducción a C++
+    </div>
+    <div>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+      <a class="btn secondary" href="/modulos/cpp/">Inicio del módulo</a>
+    </div>
+  </div>
+  <div class="container">
+    
+<div class="card">
+  <p><a href="/modulos/cpp/">&larr; Todas las lecciones</a></p>
+  <h1>Lección 4: Bucles: for y while</h1>
+  <div class="teoria">
+    
+<p>Los bucles repiten un bloque de código mientras se cumpla una condición.</p>
+
+<h3>for</h3>
+<p>Ideal cuando sabemos cuántas veces queremos repetir algo.</p>
+<pre><code>for (int i = 1; i &lt;= 5; i++) {
+    cout &lt;&lt; i &lt;&lt; " ";
+}
+cout &lt;&lt; endl; // imprime: 1 2 3 4 5</code></pre>
+<p>El <code>for</code> tiene tres partes separadas por <code>;</code>: inicialización
+(<code>int i = 1</code>), condición (<code>i &lt;= 5</code>) e incremento
+(<code>i++</code>).</p>
+
+<h3>while</h3>
+<p>Ideal cuando no sabemos de antemano cuántas repeticiones van a hacer falta.</p>
+<pre><code>int n;
+cin &gt;&gt; n;
+while (n &gt; 0) {
+    cout &lt;&lt; n &lt;&lt; " ";
+    n--;
+}
+cout &lt;&lt; endl;</code></pre>
+
+<h3>do-while</h3>
+<p>Como <code>while</code>, pero garantiza ejecutar el bloque al menos una vez:</p>
+<pre><code>int opcion;
+do {
+    cout &lt;&lt; "Ingresa un numero positivo: ";
+    cin &gt;&gt; opcion;
+} while (opcion &lt;= 0);</code></pre>
+
+  </div>
+</div>
+
+<div class="card">
+  <h2>Ejercicios de esta lección</h2>
+  
+  <div class="ejercicio-list">
+    
+    <a class="btn" href="/modulos/cpp/ejercicio/leccion4-ej1">Suma de 1 a N con for</a>
+    
+    <a class="btn" href="/modulos/cpp/ejercicio/leccion4-ej2">Tabla de multiplicar con while</a>
+    
+  </div>
+  
+</div>
+
+<div class="toolbar">
+  
+    <a class="btn secondary" href="/modulos/cpp/leccion/3">&larr; Lección anterior</a>
+  
+  
+    <a class="btn secondary" href="/modulos/cpp/leccion/5">Lección siguiente &rarr;</a>
+  
+</div>
+
+  </div>
+</body>
+</html>

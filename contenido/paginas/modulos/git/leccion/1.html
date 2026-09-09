@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lección 1 — Qué es el control de versiones y git init</title>
+  <link rel="stylesheet" href="/modulos/git/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/git/static/css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion <span>/ Git</span>
+    </div>
+    <div>
+      
+        <span class="badge">modo local</span>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <a href="/modulos/git/">&larr; Todas las lecciones</a>
+  <h1>Lección 1: Qué es el control de versiones y git init</h1>
+
+  <div class="card lesson-content">
+    
+<p>Un <strong>sistema de control de versiones</strong> lleva un registro de los
+cambios que hacés a un conjunto de archivos a lo largo del tiempo, para que
+puedas volver atrás, comparar versiones o trabajar en equipo sin pisarte con
+otras personas. <strong>Git</strong> es el sistema de control de versiones más
+usado del mundo.</p>
+
+<p>Un <strong>repositorio</strong> (repo) es una carpeta donde Git guarda el
+historial de cambios, dentro de una subcarpeta oculta llamada
+<code>.git</code>. Para convertir una carpeta común en un repositorio Git, se
+usa:</p>
+
+<pre>git init</pre>
+
+<p>Esto crea el repositorio vacío, sin ningún commit todavía, parado en una
+rama por defecto (normalmente llamada <code>main</code>). A partir de ahí, el
+comando <code>git status</code> te permite ver en todo momento en qué rama
+estás y qué cambios hay pendientes de guardar.</p>
+
+<pre>git status</pre>
+
+<p>A partir de acá, cada ejercicio te va a mostrar una consola donde podés
+escribir comandos <code>git</code> con su sintaxis real (la misma que
+usarías en tu computadora o en cualquier proyecto de verdad) y ver el
+resultado al instante.</p>
+
+  </div>
+
+  <div class="card exercise-list">
+    <h3>Ejercicios</h3>
+    
+      <a class="btn secondary" href="/modulos/git/ejercicio/leccion1-ej1">Comprobar el repositorio</a>
+    
+      <a class="btn secondary" href="/modulos/git/ejercicio/leccion1-ej2">Ver en qué rama estás</a>
+    
+  </div>
+
+  <div class="lesson-nav">
+    
+      <span></span>
+    
+    
+      <a class="btn" href="/modulos/git/leccion/2">Siguiente lección &rarr;</a>
+    
+  </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS básico: inline e interno — HTML + JS</title>
+  <link rel="stylesheet" href="/modulos/html-js/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/html-js/static/css/style.css">
+  
+</head>
+<body>
+  <div class="navbar">
+    <a class="brand" href="/modulos/html-js/">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion <span>HTML + JS</span>
+    </a>
+    <div>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <a href="/modulos/html-js/">&larr; Todas las lecciones</a>
+  <h1>Lección 3: CSS básico: inline e interno</h1>
+
+  <div class="card teoria">
+    
+        <p>Hay tres formas de aplicar CSS; acá vemos dos:</p>
+        <ol>
+          <li><strong>Inline:</strong> con el atributo <code>style</code> directo en la etiqueta:
+          <code>&lt;p style="color: red;"&gt;texto&lt;/p&gt;</code>.</li>
+          <li><strong>Interno:</strong> con una etiqueta <code>&lt;style&gt;</code> dentro del
+          <code>&lt;head&gt;</code>, usando selectores:</li>
+        </ol>
+        <pre class="console">&lt;head&gt;
+  &lt;style&gt;
+    body { font-family: sans-serif; }
+    .destacado { color: orange; font-weight: bold; }
+    #titulo { text-align: center; }
+  &lt;/style&gt;
+&lt;/head&gt;</pre>
+        <p>Los selectores más comunes: por etiqueta (<code>p</code>), por clase
+        (<code>.destacado</code>) y por id (<code>#titulo</code>).</p>
+        
+  </div>
+
+  <h2>Ejercicios</h2>
+  <div class="grid cols-2">
+    
+      <div class="card">
+        <h3>Estilo inline</h3>
+        <p style="color: var(--text-dim);">Aplicá un estilo inline (atributo style) a un &lt;p&gt; para cambiar su color.</p>
+        <a class="btn" href="/modulos/html-js/ejercicio/leccion3-ej1">Resolver</a>
+      </div>
+    
+      <div class="card">
+        <h3>Estilo interno</h3>
+        <p style="color: var(--text-dim);">Agregá un &lt;style&gt; en el &lt;head&gt; que defina un estilo para la clase .destacado y usala en algún elemento.</p>
+        <a class="btn" href="/modulos/html-js/ejercicio/leccion3-ej2">Resolver</a>
+      </div>
+    
+  </div>
+
+  </div>
+  <footer class="footnote">ing-troduccion — Introducción a HTML + JavaScript</footer>
+</body>
+</html>

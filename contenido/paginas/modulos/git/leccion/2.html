@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lección 2 — git add, git status y git commit</title>
+  <link rel="stylesheet" href="/modulos/git/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/git/static/css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion <span>/ Git</span>
+    </div>
+    <div>
+      
+        <span class="badge">modo local</span>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <a href="/modulos/git/">&larr; Todas las lecciones</a>
+  <h1>Lección 2: git add, git status y git commit</h1>
+
+  <div class="card lesson-content">
+    
+<p>Git separa el proceso de guardar cambios en dos pasos: primero elegís qué
+cambios querés guardar (el <strong>área de stage</strong>), y después los
+confirmás en un <strong>commit</strong>, que es una "foto" permanente del
+proyecto en ese momento.</p>
+
+<p>Para agregar un archivo al stage:</p>
+<pre>git add nombre_archivo</pre>
+
+<p>Para ver qué está en stage, qué está modificado y qué archivos todavía no
+tienen seguimiento (untracked):</p>
+<pre>git status</pre>
+
+<p>Para confirmar los cambios que están en stage y crear un commit con un
+mensaje descriptivo:</p>
+<pre>git commit -m "mensaje descriptivo"</pre>
+
+<p>Un buen hábito es escribir mensajes de commit cortos pero claros, que
+expliquen <em>qué</em> cambió y <em>por qué</em>.</p>
+
+  </div>
+
+  <div class="card exercise-list">
+    <h3>Ejercicios</h3>
+    
+      <a class="btn secondary" href="/modulos/git/ejercicio/leccion2-ej1">Preparar un archivo (stage)</a>
+    
+      <a class="btn secondary" href="/modulos/git/ejercicio/leccion2-ej2">Guardar el primer commit</a>
+    
+      <a class="btn secondary" href="/modulos/git/ejercicio/leccion2-ej3">Agregar y commitear</a>
+    
+  </div>
+
+  <div class="lesson-nav">
+    
+      <a class="btn secondary" href="/modulos/git/leccion/1">&larr; Lección anterior</a>
+    
+    
+      <a class="btn" href="/modulos/git/leccion/3">Siguiente lección &rarr;</a>
+    
+  </div>
+
+  </div>
+</body>
+</html>

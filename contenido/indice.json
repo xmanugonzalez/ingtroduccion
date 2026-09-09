@@ -1,0 +1,798 @@
+{
+  "paginas": {
+    "/": {
+      "archivo": "paginas/index.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "b329a761225000c0c7ba0c6f47b447666ee63e2365e1bfd820f5d79aea5a711e",
+      "bytes": 2278
+    },
+    "/login": {
+      "archivo": "paginas/login.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "9d2a96ad45979048a4e9f7c0c8aec77f493b06cf42e985259a06a3a7b5ca19ab",
+      "bytes": 1318
+    },
+    "/register": {
+      "archivo": "paginas/register.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "3a4456c20821624f4bb4d2b4f9ea26b37d86e8eb341f991e1d9dc0ae333026c2",
+      "bytes": 1585
+    },
+    "/modulos/cpp/": {
+      "archivo": "paginas/modulos/cpp/index.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "84acc75b224f97647e820dc6116eec510b756466671115bea4dedb9ccd865b5b",
+      "bytes": 2502
+    },
+    "/modulos/html-js/": {
+      "archivo": "paginas/modulos/html-js/index.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "3ab93e5010d30975e276063cad17f8dbda6c169f28dee35c14162b15d7830461",
+      "bytes": 2969
+    },
+    "/modulos/sql/": {
+      "archivo": "paginas/modulos/sql/index.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "f7ea1fc776177a518f1f83c0364afbbfcdfc348a10394efabd758029dd662ae7",
+      "bytes": 4143
+    },
+    "/modulos/python/": {
+      "archivo": "paginas/modulos/python/index.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "461d5eb1df897115f7669f31803febedc4a15111c77a81f12773682b2e6d1d9c",
+      "bytes": 4751
+    },
+    "/modulos/docker/": {
+      "archivo": "paginas/modulos/docker/index.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "9dff75008f77bd5f658917712ee566904c1c2e34d715fbd8a7912b7c7b3baca1",
+      "bytes": 2202
+    },
+    "/modulos/git/": {
+      "archivo": "paginas/modulos/git/index.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "f8612294ff55fa90026ef67699259acb5859bc8d257460483250aa8c80514b20",
+      "bytes": 2264
+    },
+    "/modulos/cpp/leccion/0": {
+      "archivo": "paginas/modulos/cpp/leccion/0.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "7715fa4a04dbd8e76cf7ad3f77fe4b355922ce2252c945a2c4cb6fb0043f6ed3",
+      "bytes": 4648
+    },
+    "/modulos/cpp/leccion/1": {
+      "archivo": "paginas/modulos/cpp/leccion/1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "0a72e4e8deecda738f66a07c8459237c1fb801afda7b7a580d90e7618ad97fa2",
+      "bytes": 3719
+    },
+    "/modulos/cpp/leccion/2": {
+      "archivo": "paginas/modulos/cpp/leccion/2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "8cf2d82db698983224ed48111e9270ca65dd5dc850a2962f991d19caf5660d49",
+      "bytes": 2507
+    },
+    "/modulos/cpp/leccion/3": {
+      "archivo": "paginas/modulos/cpp/leccion/3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "f26530d49e395b6030d626d07755d63f923e3a3b1e2a32c91722435f07d355bb",
+      "bytes": 2569
+    },
+    "/modulos/cpp/leccion/4": {
+      "archivo": "paginas/modulos/cpp/leccion/4.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "75c2d096ed532bbca168e678d4fb9ede10bb04f4736451fe96f54d38399b6ef3",
+      "bytes": 2420
+    },
+    "/modulos/cpp/leccion/5": {
+      "archivo": "paginas/modulos/cpp/leccion/5.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "dd0554555b125810fc65c09433e08d3b176457aa0d39f62dab1027807adf34f5",
+      "bytes": 2350
+    },
+    "/modulos/cpp/leccion/6": {
+      "archivo": "paginas/modulos/cpp/leccion/6.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "ec773b73f172abb1daa443182b158831400c0b982dd938929a63eca10e975fd4",
+      "bytes": 2416
+    },
+    "/modulos/html-js/leccion/1": {
+      "archivo": "paginas/modulos/html-js/leccion/1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "29d878f522b427737bb135e8207e370bd2ba5fc14551ea58795e06322d21086d",
+      "bytes": 2880
+    },
+    "/modulos/html-js/leccion/2": {
+      "archivo": "paginas/modulos/html-js/leccion/2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "90fecf04116ec00ba8d7a9425427d75d295fc0fc0793fa283f85fa1e818685e4",
+      "bytes": 2841
+    },
+    "/modulos/html-js/leccion/3": {
+      "archivo": "paginas/modulos/html-js/leccion/3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "1339d9b91cb49a3d30f904ad23685b071c09697ba9c79995150db315be18682a",
+      "bytes": 2439
+    },
+    "/modulos/html-js/leccion/4": {
+      "archivo": "paginas/modulos/html-js/leccion/4.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "c2110266422060e1021316c9c95775b7d53925c695108b48c116e7fd8406fb35",
+      "bytes": 2430
+    },
+    "/modulos/html-js/leccion/5": {
+      "archivo": "paginas/modulos/html-js/leccion/5.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "15907fec44e8ade28caf642253fb26b5ca49b2ef04a354dc1b721a19625d1487",
+      "bytes": 2950
+    },
+    "/modulos/sql/leccion/leccion1": {
+      "archivo": "paginas/modulos/sql/leccion/leccion1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "69e4ed46f4712f6445e491bcac768cd33b384e85b68b1da3c4bca43297709a9b",
+      "bytes": 3090
+    },
+    "/modulos/sql/ejercicio/leccion1-ej1": {
+      "archivo": "paginas/modulos/sql/ejercicio/leccion1-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "2d7c56f825fc4c0f68f557eefc2fa3030dcfda7a1a66ad11dade353a94e89048",
+      "bytes": 5946
+    },
+    "/modulos/sql/ejercicio/leccion1-ej2": {
+      "archivo": "paginas/modulos/sql/ejercicio/leccion1-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "c80ffa2af983d5c6a3027184960cce067054c8183e35964a1e3651ddad08ce93",
+      "bytes": 5848
+    },
+    "/modulos/sql/leccion/leccion2": {
+      "archivo": "paginas/modulos/sql/leccion/leccion2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "a0f877abf65535b3c841e078e6b01ee44148605e2d98273f6c7a59f1bfd492a1",
+      "bytes": 2400
+    },
+    "/modulos/sql/ejercicio/leccion2-ej1": {
+      "archivo": "paginas/modulos/sql/ejercicio/leccion2-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "566845593b69aaa36ed5a544150b5c744ee6ee4a04d001a806905e4340ec884a",
+      "bytes": 7972
+    },
+    "/modulos/sql/ejercicio/leccion2-ej2": {
+      "archivo": "paginas/modulos/sql/ejercicio/leccion2-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "0f35525740c092b1c81f63ba42306da3699eeb625187b247ca3c4f1d6b5ca445",
+      "bytes": 8012
+    },
+    "/modulos/sql/leccion/leccion3": {
+      "archivo": "paginas/modulos/sql/leccion/leccion3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "cbd4175e1882f7b4b9f9372fe4770d96ad585cd7713f78bacb5227d50ee927a3",
+      "bytes": 2834
+    },
+    "/modulos/sql/ejercicio/leccion3-ej1": {
+      "archivo": "paginas/modulos/sql/ejercicio/leccion3-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "e99fb5281e00a42954dadc7d8ef04c562b12020b246db75122e5867085296963",
+      "bytes": 7807
+    },
+    "/modulos/sql/ejercicio/leccion3-ej2": {
+      "archivo": "paginas/modulos/sql/ejercicio/leccion3-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "a44f6e83c5a33b9f3210107d58c20975eb47fdc8d15ccf366f92a0aff0b5c43b",
+      "bytes": 7787
+    },
+    "/modulos/sql/ejercicio/leccion3-ej3": {
+      "archivo": "paginas/modulos/sql/ejercicio/leccion3-ej3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "34cf4952b4cf64c18d7dad0c85556580b4750bbe885bdd6d4bc6785fb14b90e6",
+      "bytes": 7871
+    },
+    "/modulos/sql/leccion/leccion4": {
+      "archivo": "paginas/modulos/sql/leccion/leccion4.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "71ce8770a49d48b092c4a8c670a3f573524d5e8ad7d55734f640f169954a00c4",
+      "bytes": 2498
+    },
+    "/modulos/sql/ejercicio/leccion4-ej1": {
+      "archivo": "paginas/modulos/sql/ejercicio/leccion4-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "c93449aa15b9ea48f73dbd597ffccaf2e0653378d22f44c8820e245a9ec1990e",
+      "bytes": 7820
+    },
+    "/modulos/sql/ejercicio/leccion4-ej2": {
+      "archivo": "paginas/modulos/sql/ejercicio/leccion4-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "556b8be8a929560feb508185bd8f9d841b5e12f316ffc9325129504a9de188a6",
+      "bytes": 7801
+    },
+    "/modulos/sql/leccion/leccion5": {
+      "archivo": "paginas/modulos/sql/leccion/leccion5.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "25bf0b732d6d0dd09f4a272aa2f3bdf9dec804b0eeab964f2cdeeab2cc7c9a75",
+      "bytes": 2662
+    },
+    "/modulos/sql/ejercicio/leccion5-ej1": {
+      "archivo": "paginas/modulos/sql/ejercicio/leccion5-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "d90fbfc554bdd78183198f0c0956eb1825da53bd3657f8aed745af77a169764f",
+      "bytes": 10007
+    },
+    "/modulos/sql/ejercicio/leccion5-ej2": {
+      "archivo": "paginas/modulos/sql/ejercicio/leccion5-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "7d88f1c1f35ac6deee7886dad5446a1abcefc9835e4912a0d8faa1533b86b241",
+      "bytes": 9795
+    },
+    "/modulos/sql/leccion/leccion6": {
+      "archivo": "paginas/modulos/sql/leccion/leccion6.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "92ced2155b7e0591e58f0d1dcec3e8a74f200e59450973eefae6e2e5b43572df",
+      "bytes": 2905
+    },
+    "/modulos/sql/ejercicio/leccion6-ej1": {
+      "archivo": "paginas/modulos/sql/ejercicio/leccion6-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "f508d8e42c2ed1630591f6e013cc68d7e62cb09696914accaf8de1a95a9607d8",
+      "bytes": 9978
+    },
+    "/modulos/sql/ejercicio/leccion6-ej2": {
+      "archivo": "paginas/modulos/sql/ejercicio/leccion6-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "76e177cd08868bf69dd4b599fbb3cf5f277959bece999963c2370b4081f2e54d",
+      "bytes": 9964
+    },
+    "/modulos/sql/ejercicio/leccion6-ej3": {
+      "archivo": "paginas/modulos/sql/ejercicio/leccion6-ej3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "77dd4050b880349dfbdc6cb7177aa52a7afcc2cf1f67cb0f7d8502f926407458",
+      "bytes": 10088
+    },
+    "/modulos/python/leccion/leccion1": {
+      "archivo": "paginas/modulos/python/leccion/leccion1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "4f8ccc22705f19900efb76fa02f08e3f9b5d09f3c7be6a6a41f170cc3979987a",
+      "bytes": 2694
+    },
+    "/modulos/python/ejercicio/leccion1-ej1": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion1-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "70ad7225bffebb83d359966dfa212f51c8351b9062ce59b8b63109cc64c06ddd",
+      "bytes": 3136
+    },
+    "/modulos/python/ejercicio/leccion1-ej2": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion1-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "41e60c3ce04e9ca0bbe821d83a6a0e586450e1bf90d858bce872a7546ffc8879",
+      "bytes": 3112
+    },
+    "/modulos/python/ejercicio/leccion1-ej3": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion1-ej3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "c5e2fbd146608cc4d8565d7139827652f22e7f1c515728c90bdeb4bf80e85f29",
+      "bytes": 2986
+    },
+    "/modulos/python/leccion/leccion2": {
+      "archivo": "paginas/modulos/python/leccion/leccion2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "81dc3fa2cc678ab29a2050c25a67f8f5cc23f1b35f29a7059153c988a82556d8",
+      "bytes": 2160
+    },
+    "/modulos/python/ejercicio/leccion2-ej1": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion2-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "2aea47891872c6c50d88212342cdb3e5f727ef4bd355edae961a1bf7d57f652e",
+      "bytes": 3085
+    },
+    "/modulos/python/ejercicio/leccion2-ej2": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion2-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "f82398bd3d1846206b7df3ea374381d458055386fdaa31951182898aaea98225",
+      "bytes": 3128
+    },
+    "/modulos/python/ejercicio/leccion2-ej3": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion2-ej3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "90e4ef886bce2d4eac2ab90bc6dffd2737a5e1e2f53f3e771f2d7c69c7d6dd91",
+      "bytes": 3019
+    },
+    "/modulos/python/leccion/leccion3": {
+      "archivo": "paginas/modulos/python/leccion/leccion3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "ed96f10d95d2de1bc0a352d93ba3190b5bb89a8e58af228e77605cc4224bc8ac",
+      "bytes": 1956
+    },
+    "/modulos/python/ejercicio/leccion3-ej1": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion3-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "ae972d0b5c8acae51c6f5fba0d0d1e82370325dcc09264d7d8a831d7146f9cae",
+      "bytes": 3055
+    },
+    "/modulos/python/ejercicio/leccion3-ej2": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion3-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "51b3f6c632831e8b66995a595bd9ef1f100b7291bd4a9388afb52d0f609e3a46",
+      "bytes": 3034
+    },
+    "/modulos/python/ejercicio/leccion3-ej3": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion3-ej3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "24f169270b14f4dcf6b7f4f6845a204f6045a04ee65c25be09c7bf2d1ce6b4ac",
+      "bytes": 3095
+    },
+    "/modulos/python/leccion/leccion4": {
+      "archivo": "paginas/modulos/python/leccion/leccion4.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "4e6adb211fe046c5a3374599e025dd068af013629edd5768c12c0cf325a135b3",
+      "bytes": 1970
+    },
+    "/modulos/python/ejercicio/leccion4-ej1": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion4-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "9572fec12bbb6fcbc4b8c88026574fe5898611f6bc14eedeaead4c407ab64b68",
+      "bytes": 3083
+    },
+    "/modulos/python/ejercicio/leccion4-ej2": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion4-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "1f1f124537a89a9d8becf080994002559f544801b21302de4bf24ef841a86098",
+      "bytes": 3012
+    },
+    "/modulos/python/ejercicio/leccion4-ej3": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion4-ej3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "590935224950f6460565382d40b4472dd81f3832e78e057d7fcccaf2fd566e27",
+      "bytes": 2982
+    },
+    "/modulos/python/leccion/leccion5": {
+      "archivo": "paginas/modulos/python/leccion/leccion5.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "92e4e801baa609bfe4a7a4540b9c3dd894c8adc1644bd0742b1bb986f4cc4a6f",
+      "bytes": 1981
+    },
+    "/modulos/python/ejercicio/leccion5-ej1": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion5-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "0c016bd642d866edee85e04219285b471a909bbe35a7ced22a9456743bab7801",
+      "bytes": 3055
+    },
+    "/modulos/python/ejercicio/leccion5-ej2": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion5-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "0d5db60262d624160bc3d8fc9a8936e3b957339f8b6f43de723345cb56d9c87a",
+      "bytes": 3100
+    },
+    "/modulos/python/ejercicio/leccion5-ej3": {
+      "archivo": "paginas/modulos/python/ejercicio/leccion5-ej3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "0b37e35cac2fad1e7914480e0b0fa11718778c568e881bf896489fc4dfbe9324",
+      "bytes": 3181
+    },
+    "/modulos/docker/leccion/leccion1": {
+      "archivo": "paginas/modulos/docker/leccion/leccion1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "8b501f89b2b20b75baf68ab3b098c01185809b811517e6e9a8a518cb0eed50fb",
+      "bytes": 3323
+    },
+    "/modulos/docker/leccion/leccion2": {
+      "archivo": "paginas/modulos/docker/leccion/leccion2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "3d33f6d57c6ada180c6ca9a37adb801155226d221f742bd2dad7e1c3ce650db6",
+      "bytes": 2401
+    },
+    "/modulos/docker/leccion/leccion3": {
+      "archivo": "paginas/modulos/docker/leccion/leccion3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "96734099ca44459317a3ace0834a5b0de14942353288f6da3b1158cf0ca5ed0c",
+      "bytes": 2883
+    },
+    "/modulos/docker/leccion/leccion4": {
+      "archivo": "paginas/modulos/docker/leccion/leccion4.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "2555712cf7b9dd7725ce71cab61c6e01bc3c1decf046af1a3d5a5ea51ee3e9bd",
+      "bytes": 2748
+    },
+    "/modulos/docker/leccion/leccion5": {
+      "archivo": "paginas/modulos/docker/leccion/leccion5.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "c9f5d8b285acc7159d148a77caa6f30bb9b53b0ba9f0e5bbb3a1d7f28aa23556",
+      "bytes": 3488
+    },
+    "/modulos/git/leccion/1": {
+      "archivo": "paginas/modulos/git/leccion/1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "cbc02a6cf332b8cb5ba2cceaeb0d241e589f8c0565b8df00a5726efabfd977ed",
+      "bytes": 2513
+    },
+    "/modulos/git/leccion/2": {
+      "archivo": "paginas/modulos/git/leccion/2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "2c8ac4c605237867eddfdea680f603e5de826728719224bd115005fe8407a356",
+      "bytes": 2286
+    },
+    "/modulos/git/leccion/3": {
+      "archivo": "paginas/modulos/git/leccion/3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "fa9153606bb37b15e0ce3250faf33ac893b449967fc054e5b0ea81ebe11418c7",
+      "bytes": 1958
+    },
+    "/modulos/git/leccion/4": {
+      "archivo": "paginas/modulos/git/leccion/4.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "f231c614754836741f6c40e853a3d06c8bc13e1d33cdc55dc8cbffe4a33f46df",
+      "bytes": 2234
+    },
+    "/modulos/git/leccion/5": {
+      "archivo": "paginas/modulos/git/leccion/5.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "765ace414ce3e837885d9101d6ff2c00e2bcc8ff26dc3cf9304fb7e2287ff164",
+      "bytes": 1921
+    },
+    "/modulos/cpp/ejercicio/leccion1-ej1": {
+      "archivo": "paginas/modulos/cpp/ejercicio/leccion1-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "61c27ce00185e2d06306390f3c3f3f24064d22ec11aed5978a5b121735c1a281",
+      "bytes": 6379
+    },
+    "/modulos/cpp/ejercicio/leccion1-ej2": {
+      "archivo": "paginas/modulos/cpp/ejercicio/leccion1-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "baffb642c338b0e5e5ed673787de5a9dc3c62f12a2793f62ddf455cef824cb07",
+      "bytes": 6583
+    },
+    "/modulos/cpp/ejercicio/leccion2-ej1": {
+      "archivo": "paginas/modulos/cpp/ejercicio/leccion2-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "f2d445df5bc2f927b949d11c4c880943f45bdadd5b8287b05d1e86178658a3d3",
+      "bytes": 6394
+    },
+    "/modulos/cpp/ejercicio/leccion2-ej2": {
+      "archivo": "paginas/modulos/cpp/ejercicio/leccion2-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "3f94d5392fd0fe60ba6c7b85bc1f185f20a4a0a894618f8934d6ca3564bdc615",
+      "bytes": 6375
+    },
+    "/modulos/cpp/ejercicio/leccion3-ej1": {
+      "archivo": "paginas/modulos/cpp/ejercicio/leccion3-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "30e35fcb7f7256cbe97f084c64cc087b63813c9d546b3e792d2d6b15cf86597b",
+      "bytes": 6371
+    },
+    "/modulos/cpp/ejercicio/leccion3-ej2": {
+      "archivo": "paginas/modulos/cpp/ejercicio/leccion3-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "2f80f1e0d59952c1e9e7fb9f5d6fdba365c90010c79192a17c67a1fe3acb1f22",
+      "bytes": 6398
+    },
+    "/modulos/cpp/ejercicio/leccion4-ej1": {
+      "archivo": "paginas/modulos/cpp/ejercicio/leccion4-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "ea834176f3331c5252c40fe58dfdb3c6093f60610bc59d4d7f4d200315a112b1",
+      "bytes": 6459
+    },
+    "/modulos/cpp/ejercicio/leccion4-ej2": {
+      "archivo": "paginas/modulos/cpp/ejercicio/leccion4-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "2f8b7165bde1225e4c5ca3bdeb87a6f835f207f630840e688533a11319b4e0cf",
+      "bytes": 6491
+    },
+    "/modulos/cpp/ejercicio/leccion5-ej1": {
+      "archivo": "paginas/modulos/cpp/ejercicio/leccion5-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "2867ca54fc425f5fd79b92e6af7479a8f8378157623a4cfe2e3ecdcd9a1085da",
+      "bytes": 6533
+    },
+    "/modulos/cpp/ejercicio/leccion5-ej2": {
+      "archivo": "paginas/modulos/cpp/ejercicio/leccion5-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "22b9e16944708ecf6e68afe7b76fc5c1e6e17ed759f88a8a33cd49ee3afb8e86",
+      "bytes": 6690
+    },
+    "/modulos/cpp/ejercicio/leccion6-ej1": {
+      "archivo": "paginas/modulos/cpp/ejercicio/leccion6-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "a7cee3633e0487ce4cec3d633fdeec119bed4a1072eba90bd0cff4c92ae10260",
+      "bytes": 6494
+    },
+    "/modulos/cpp/ejercicio/leccion6-ej2": {
+      "archivo": "paginas/modulos/cpp/ejercicio/leccion6-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "1a604ffb175f2c20871a013afec33eae4e63cc82d1f3fabe4819632facc503f8",
+      "bytes": 6476
+    },
+    "/modulos/html-js/ejercicio/leccion1-ej1": {
+      "archivo": "paginas/modulos/html-js/ejercicio/leccion1-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "0a65fec4d61daadbc4dda219662465c79872ae449b4e2c5b0162e1658e55560f",
+      "bytes": 4317
+    },
+    "/modulos/html-js/ejercicio/leccion1-ej2": {
+      "archivo": "paginas/modulos/html-js/ejercicio/leccion1-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "43013394383a8e41b30d9c4133e0de93328b68431179fdf669dca8236f557364",
+      "bytes": 4241
+    },
+    "/modulos/html-js/ejercicio/leccion2-ej1": {
+      "archivo": "paginas/modulos/html-js/ejercicio/leccion2-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "035834bee3a746449d072561655f39846562b97784a1665a183b133ba6c11b50",
+      "bytes": 4235
+    },
+    "/modulos/html-js/ejercicio/leccion2-ej2": {
+      "archivo": "paginas/modulos/html-js/ejercicio/leccion2-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "6deae039e788a829c12b1b65885aa19b2bdd8e84914eeced1e9ae8560de01b81",
+      "bytes": 4168
+    },
+    "/modulos/html-js/ejercicio/leccion2-ej3": {
+      "archivo": "paginas/modulos/html-js/ejercicio/leccion2-ej3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "39fb239b38a3339250f71e1ede3fa805d8c788471d176f13856ecf3c0b987d71",
+      "bytes": 4156
+    },
+    "/modulos/html-js/ejercicio/leccion3-ej1": {
+      "archivo": "paginas/modulos/html-js/ejercicio/leccion3-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "8c1a8f73ea1c88e035ee6b1824c2f412b70aae543fe5cb71647219fdccc3fe50",
+      "bytes": 4201
+    },
+    "/modulos/html-js/ejercicio/leccion3-ej2": {
+      "archivo": "paginas/modulos/html-js/ejercicio/leccion3-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "7148280506445cdb35437029e0a83cb18781c54c693980dfce551e6e6f629e71",
+      "bytes": 4271
+    },
+    "/modulos/html-js/ejercicio/leccion4-ej1": {
+      "archivo": "paginas/modulos/html-js/ejercicio/leccion4-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "5445e8c545840625af96ee98556ccda06b2bc72e4a2f597dca16279f24e02bfe",
+      "bytes": 4220
+    },
+    "/modulos/html-js/ejercicio/leccion4-ej2": {
+      "archivo": "paginas/modulos/html-js/ejercicio/leccion4-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "f39e128237a382c4dba1b544c84438d3f539aee480de9a2f137d721a0a070107",
+      "bytes": 4314
+    },
+    "/modulos/html-js/ejercicio/leccion5-ej1": {
+      "archivo": "paginas/modulos/html-js/ejercicio/leccion5-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "6e8c272f7c3178d2f28e6b0bd6ecc046645afed1eb69573d6cf5ecdeae7cf808",
+      "bytes": 4365
+    },
+    "/modulos/html-js/ejercicio/leccion5-ej2": {
+      "archivo": "paginas/modulos/html-js/ejercicio/leccion5-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "d68e8a3c44419b8e70734387fa41e258f4e7415f62b728de61c9a1e9d0dfc5b0",
+      "bytes": 4411
+    },
+    "/modulos/html-js/ejercicio/leccion5-ej3": {
+      "archivo": "paginas/modulos/html-js/ejercicio/leccion5-ej3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "a0f25af646d77443e9f353be3fcc2e4a7d797007280351ff5b3c1037e25063c8",
+      "bytes": 4410
+    },
+    "/modulos/docker/ejercicio/leccion1-ej1": {
+      "archivo": "paginas/modulos/docker/ejercicio/leccion1-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "6caa338dd1fbcc163c613de371dc24506f991aa3420d24cef248ff83f0ef79ab",
+      "bytes": 3571
+    },
+    "/modulos/docker/ejercicio/leccion1-ej2": {
+      "archivo": "paginas/modulos/docker/ejercicio/leccion1-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "3559dc09840febadcf64e7b4b65eb811921539d1a6b90a729d4dac3cf3d1c20b",
+      "bytes": 3486
+    },
+    "/modulos/docker/ejercicio/leccion2-ej1": {
+      "archivo": "paginas/modulos/docker/ejercicio/leccion2-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "28737e734e26219269e0ab9a966b1646180dd692c06502f2732d3b1d699bc762",
+      "bytes": 3598
+    },
+    "/modulos/docker/ejercicio/leccion2-ej2": {
+      "archivo": "paginas/modulos/docker/ejercicio/leccion2-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "f365600013b8e89b7db3a19626122ea2f14d3e2b5ad2f344af11ddefaf5589f2",
+      "bytes": 3670
+    },
+    "/modulos/docker/ejercicio/leccion3-ej1": {
+      "archivo": "paginas/modulos/docker/ejercicio/leccion3-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "a714b03e0e1e01f5850afc590558e031b385c09b07af3c4743675052b9777c5e",
+      "bytes": 3886
+    },
+    "/modulos/docker/ejercicio/leccion3-ej2": {
+      "archivo": "paginas/modulos/docker/ejercicio/leccion3-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "4e8b046b9fd986994d276564c0d4d81afabfbf096917d0c894891d4a37abb459",
+      "bytes": 3525
+    },
+    "/modulos/docker/ejercicio/leccion3-ej3": {
+      "archivo": "paginas/modulos/docker/ejercicio/leccion3-ej3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "27865939298637dd07409b20fc81af32553da097c829168563c5a541847a9cba",
+      "bytes": 3501
+    },
+    "/modulos/docker/ejercicio/leccion4-ej1": {
+      "archivo": "paginas/modulos/docker/ejercicio/leccion4-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "dd13b33f2ad39bb026b99c4cacada0254ff6115697af24cad9ef6fd5344f124e",
+      "bytes": 3559
+    },
+    "/modulos/docker/ejercicio/leccion4-ej2": {
+      "archivo": "paginas/modulos/docker/ejercicio/leccion4-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "6cdd0ea14510a340b54b73f3e45a07609809431420a1941b8910b1233e739ad0",
+      "bytes": 3432
+    },
+    "/modulos/docker/ejercicio/leccion4-ej3": {
+      "archivo": "paginas/modulos/docker/ejercicio/leccion4-ej3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "71fc30d65cf67a9f3d0613c10cefe3ce37df077da8cc26ddf00e082cfd407bab",
+      "bytes": 3403
+    },
+    "/modulos/docker/ejercicio/leccion5-ej1": {
+      "archivo": "paginas/modulos/docker/ejercicio/leccion5-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "4689409dbabfa4c1b77bbaaa37b806f5d5097abc80bf8f818fc1760130888077",
+      "bytes": 3922
+    },
+    "/modulos/docker/ejercicio/leccion5-ej2": {
+      "archivo": "paginas/modulos/docker/ejercicio/leccion5-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "7182d1c3732d6904e4b4a29b7b8edc242b81b4a263f53df1fd9121b563b5e527",
+      "bytes": 3587
+    },
+    "/modulos/git/ejercicio/leccion1-ej1": {
+      "archivo": "paginas/modulos/git/ejercicio/leccion1-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "6f0e078881759267bf0bb4db8406728f644e6a9d998af9a413cfe2824639e37f",
+      "bytes": 4690
+    },
+    "/modulos/git/ejercicio/leccion1-ej2": {
+      "archivo": "paginas/modulos/git/ejercicio/leccion1-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "8f7b1996be77a1557101f2efd40ec640a772b8d97d48f376e8deced9cab7bca2",
+      "bytes": 4666
+    },
+    "/modulos/git/ejercicio/leccion2-ej1": {
+      "archivo": "paginas/modulos/git/ejercicio/leccion2-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "54e9396fb10d6d74a0e4fc104765561adc899051735ad0a9530974e6669bee6d",
+      "bytes": 4659
+    },
+    "/modulos/git/ejercicio/leccion2-ej2": {
+      "archivo": "paginas/modulos/git/ejercicio/leccion2-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "6392d8de6c4dd85cd22997a41f3f05b4ea0cdcf992ec224d979eaa94cb22fc2f",
+      "bytes": 4645
+    },
+    "/modulos/git/ejercicio/leccion2-ej3": {
+      "archivo": "paginas/modulos/git/ejercicio/leccion2-ej3.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "2eb2377fae59488f3dd41e5437dabc264d5ed9886d5bd24c046e656822d06c20",
+      "bytes": 4742
+    },
+    "/modulos/git/ejercicio/leccion3-ej1": {
+      "archivo": "paginas/modulos/git/ejercicio/leccion3-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "60d10e807aa57c903e74690171458c7acc88ad3a82b4a7c3933174c22f54aef0",
+      "bytes": 4608
+    },
+    "/modulos/git/ejercicio/leccion3-ej2": {
+      "archivo": "paginas/modulos/git/ejercicio/leccion3-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "553d87ca5e520ce1844fcb1e1a82581e7d10cdd565929fcd8414d844f99a3919",
+      "bytes": 4729
+    },
+    "/modulos/git/ejercicio/leccion4-ej1": {
+      "archivo": "paginas/modulos/git/ejercicio/leccion4-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "04a4752c372a4d037f6fb7354a2d6b90b5d85a0d71ee9f5cf4e58985cd96e51e",
+      "bytes": 4579
+    },
+    "/modulos/git/ejercicio/leccion4-ej2": {
+      "archivo": "paginas/modulos/git/ejercicio/leccion4-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "3cb5c10d11fa8c7c691b02dd2360ee08b1ecdb86f8390f27f48d02cfa8bffa0c",
+      "bytes": 4619
+    },
+    "/modulos/git/ejercicio/leccion5-ej1": {
+      "archivo": "paginas/modulos/git/ejercicio/leccion5-ej1.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "15b36b838c0e5a9eb72fe44ad2c003c549af488efef1ceb01cfa2c6d5d1e1e8c",
+      "bytes": 4698
+    },
+    "/modulos/git/ejercicio/leccion5-ej2": {
+      "archivo": "paginas/modulos/git/ejercicio/leccion5-ej2.html",
+      "tipo": "text/html; charset=utf-8",
+      "sha256": "14f667cf28e906da9182822e88202dfa41655ad7b240efbbccbacf34d0ef8d08",
+      "bytes": 4658
+    }
+  },
+  "recursos": {
+    "/static/css/base_style.css": {
+      "archivo": "recursos/static/css/base_style.css",
+      "tipo": "text/css; charset=utf-8",
+      "sha256": "99cbf8e30bf0f2689a5302482d678d66f6efb603f7bc542c89332b290208e316",
+      "bytes": 3906
+    },
+    "/static/logo.png": {
+      "archivo": "recursos/static/logo.png",
+      "tipo": "image/png",
+      "sha256": "15efd2a708051c514ad1864a4e7db887f8e4ec058f98921f41a8954e2a6c6010",
+      "bytes": 1375534
+    },
+    "/modulos/cpp/static/css/base_style.css": {
+      "archivo": "recursos/modulos/cpp/static/css/base_style.css",
+      "tipo": "text/css; charset=utf-8",
+      "sha256": "99cbf8e30bf0f2689a5302482d678d66f6efb603f7bc542c89332b290208e316",
+      "bytes": 3906
+    },
+    "/modulos/cpp/static/css/modulo.css": {
+      "archivo": "recursos/modulos/cpp/static/css/modulo.css",
+      "tipo": "text/css; charset=utf-8",
+      "sha256": "ea80a5880b3a349e04889cc269dd153a002a7c82433f2a10b454803d7824bc4e",
+      "bytes": 1332
+    },
+    "/modulos/html-js/static/css/base_style.css": {
+      "archivo": "recursos/modulos/html-js/static/css/base_style.css",
+      "tipo": "text/css; charset=utf-8",
+      "sha256": "99cbf8e30bf0f2689a5302482d678d66f6efb603f7bc542c89332b290208e316",
+      "bytes": 3906
+    },
+    "/modulos/html-js/static/css/style.css": {
+      "archivo": "recursos/modulos/html-js/static/css/style.css",
+      "tipo": "text/css; charset=utf-8",
+      "sha256": "197c71549afddbb045f2112d4d7e079ab85f0c8da39d4fbb878b15f8f025c8ef",
+      "bytes": 1172
+    },
+    "/modulos/sql/static/css/base_style.css": {
+      "archivo": "recursos/modulos/sql/static/css/base_style.css",
+      "tipo": "text/css; charset=utf-8",
+      "sha256": "99cbf8e30bf0f2689a5302482d678d66f6efb603f7bc542c89332b290208e316",
+      "bytes": 3906
+    },
+    "/modulos/sql/static/css/style.css": {
+      "archivo": "recursos/modulos/sql/static/css/style.css",
+      "tipo": "text/css; charset=utf-8",
+      "sha256": "807015f281c295ca57fb34577faec5751d23589c01e67d6fe4f3cd3ae0c0df1e",
+      "bytes": 2083
+    },
+    "/modulos/python/static/css/base_style.css": {
+      "archivo": "recursos/modulos/python/static/css/base_style.css",
+      "tipo": "text/css; charset=utf-8",
+      "sha256": "99cbf8e30bf0f2689a5302482d678d66f6efb603f7bc542c89332b290208e316",
+      "bytes": 3906
+    },
+    "/modulos/python/static/css/modulo.css": {
+      "archivo": "recursos/modulos/python/static/css/modulo.css",
+      "tipo": "text/css; charset=utf-8",
+      "sha256": "b15cf175eb403bdaafeac68abafa675f52f77d1d5763c1be16ab46d8e1d026b2",
+      "bytes": 971
+    },
+    "/modulos/docker/static/css/base_style.css": {
+      "archivo": "recursos/modulos/docker/static/css/base_style.css",
+      "tipo": "text/css; charset=utf-8",
+      "sha256": "99cbf8e30bf0f2689a5302482d678d66f6efb603f7bc542c89332b290208e316",
+      "bytes": 3906
+    },
+    "/modulos/docker/static/css/style.css": {
+      "archivo": "recursos/modulos/docker/static/css/style.css",
+      "tipo": "text/css; charset=utf-8",
+      "sha256": "0eb198fe3222f40158b60b1ea93db3cc7f77b3e584fd0abfe7bf47e4a5ef375c",
+      "bytes": 1089
+    },
+    "/modulos/git/static/css/base_style.css": {
+      "archivo": "recursos/modulos/git/static/css/base_style.css",
+      "tipo": "text/css; charset=utf-8",
+      "sha256": "99cbf8e30bf0f2689a5302482d678d66f6efb603f7bc542c89332b290208e316",
+      "bytes": 3906
+    },
+    "/modulos/git/static/css/style.css": {
+      "archivo": "recursos/modulos/git/static/css/style.css",
+      "tipo": "text/css; charset=utf-8",
+      "sha256": "b097dbbf5c79bf700593ee43304c773a5dc226e028a5a3cbc76ba88211880246",
+      "bytes": 1055
+    }
+  }
+}

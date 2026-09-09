@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lección 5 — Merge básico</title>
+  <link rel="stylesheet" href="/modulos/git/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/git/static/css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion <span>/ Git</span>
+    </div>
+    <div>
+      
+        <span class="badge">modo local</span>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <a href="/modulos/git/">&larr; Todas las lecciones</a>
+  <h1>Lección 5: Merge básico</h1>
+
+  <div class="card lesson-content">
+    
+<p>Cuando terminás de trabajar en una rama (por ejemplo <code>feature</code>)
+y querés incorporar esos cambios a otra rama (por ejemplo <code>main</code>),
+usás <code>git merge</code>.</p>
+
+<p>El flujo típico es: pararte en la rama que va a <em>recibir</em> los
+cambios, y desde ahí mergear la otra rama:</p>
+
+<pre>git checkout main
+git merge feature</pre>
+
+<p>Si los cambios no se superponen, Git hace el merge automáticamente. Para
+confirmar que una rama ya fue integrada a la actual, podés usar:</p>
+
+<pre>git branch --merged</pre>
+
+<p>Esto lista las ramas cuyos commits ya forman parte de la rama en la que
+estás parado.</p>
+
+  </div>
+
+  <div class="card exercise-list">
+    <h3>Ejercicios</h3>
+    
+      <a class="btn secondary" href="/modulos/git/ejercicio/leccion5-ej1">Mergear una rama</a>
+    
+      <a class="btn secondary" href="/modulos/git/ejercicio/leccion5-ej2">Verificar un merge</a>
+    
+  </div>
+
+  <div class="lesson-nav">
+    
+      <a class="btn secondary" href="/modulos/git/leccion/4">&larr; Lección anterior</a>
+    
+    
+  </div>
+
+  </div>
+</body>
+</html>

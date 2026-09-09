@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Variables y tipos de datos - ing-troduccion</title>
+<link rel="stylesheet" href="/modulos/python/static/css/base_style.css">
+<link rel="stylesheet" href="/modulos/python/static/css/modulo.css">
+</head>
+<body>
+<div class="navbar">
+  <a class="brand" href="/modulos/python/">
+    <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+    ing<span>-troduccion</span> · Python
+  </a>
+  <div>
+    <a href="/modulos/python/">Inicio</a>
+    &nbsp;|&nbsp;
+    <a href="/">Volver al central</a>
+  </div>
+</div>
+<div class="container">
+
+<div class="top-links">
+  <a href="/modulos/python/">&larr; Volver a lecciones</a>
+</div>
+<h1>Variables y tipos de datos</h1>
+<div class="card teoria">
+  
+        <p>En Python, una <b>variable</b> es un nombre que apunta a un valor guardado en memoria.
+        No hace falta declarar el tipo: Python lo infiere automáticamente.</p>
+        <pre class="console">nombre = "Ada"      # str (texto)
+edad = 30           # int (entero)
+altura = 1.65        # float (decimal)
+es_estudiante = True # bool (verdadero/falso)</pre>
+        <p>Podés ver el tipo de una variable con la función <code>type()</code>:</p>
+        <pre class="console">print(type(edad))   # &lt;class 'int'&gt;</pre>
+        <p>Python es de <b>tipado dinámico</b>: una misma variable puede cambiar de tipo
+        durante la ejecución (aunque no es buena práctica abusar de esto).</p>
+        <p>Para convertir entre tipos se usan las funciones <code>int()</code>, <code>float()</code>,
+        <code>str()</code>, <code>bool()</code>:</p>
+        <pre class="console">edad_texto = "30"
+edad_numero = int(edad_texto)  # ahora es un int, se puede sumar</pre>
+        <p>Python es uno de los lenguajes de programación más usados del mundo: se usa para
+        desarrollo web, ciencia de datos, automatización de tareas, inteligencia artificial y
+        mucho más. Es un buen primer lenguaje porque su sintaxis es simple y se lee casi como
+        texto en inglés.</p>
+        
+</div>
+
+<h2>Ejercicios</h2>
+<div class="ejercicio-list">
+  
+  <div class="ejercicio-row">
+    <span>Crear variables</span>
+    <a class="btn" href="/modulos/python/ejercicio/leccion1-ej1">Practicar</a>
+  </div>
+  
+  <div class="ejercicio-row">
+    <span>Conversión de tipos</span>
+    <a class="btn" href="/modulos/python/ejercicio/leccion1-ej2">Practicar</a>
+  </div>
+  
+  <div class="ejercicio-row">
+    <span>Tipo de dato</span>
+    <a class="btn" href="/modulos/python/ejercicio/leccion1-ej3">Practicar</a>
+  </div>
+  
+</div>
+
+</div>
+</body>
+</html>

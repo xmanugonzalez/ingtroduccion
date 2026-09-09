@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comandos básicos de la CLI de Docker — Docker</title>
+<link rel="stylesheet" href="/modulos/docker/static/css/base_style.css">
+<link rel="stylesheet" href="/modulos/docker/static/css/style.css">
+</head>
+<body>
+<div class="navbar">
+  <a href="/modulos/docker/" class="brand">
+    <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+    ing-troduccion · <span>Docker</span>
+  </a>
+  <div>
+    <a href="/" class="btn secondary">Volver al central</a>
+  </div>
+</div>
+<div class="container">
+  
+<div class="breadcrumb"><a href="/modulos/docker/">Lecciones</a> / Comandos básicos de la CLI de Docker</div>
+
+<h1>Comandos básicos de la CLI de Docker</h1>
+
+<div class="card theory">
+  
+<p>Además de escribir Dockerfiles, hay que saber manejar imágenes y
+contenedores desde la línea de comandos.</p>
+
+<h3>docker build</h3>
+<p>Construye una imagen a partir de un Dockerfile.</p>
+<pre>docker build -t nombre-imagen .</pre>
+<p><code>-t</code> le pone nombre (tag) a la imagen; <code>.</code> es el
+contexto de build (la carpeta donde Docker busca el Dockerfile y los
+archivos a copiar).</p>
+
+<h3>docker run</h3>
+<p>Crea y arranca un contenedor a partir de una imagen.</p>
+<pre>docker run -p 5000:5000 nombre-imagen</pre>
+<p><code>-p host:contenedor</code> publica un puerto del contenedor hacia el
+host. También son comunes <code>-d</code> (modo background/"detached") y
+<code>--name</code> (nombrar el contenedor).</p>
+
+<h3>docker ps</h3>
+<p>Lista los contenedores en ejecución. Con <code>-a</code> muestra también los
+detenidos.</p>
+<pre>docker ps
+docker ps -a</pre>
+
+<h3>docker images</h3>
+<p>Lista las imágenes descargadas/construidas localmente.</p>
+<pre>docker images</pre>
+
+<h3>Otros comandos frecuentes</h3>
+<ul>
+<li><code>docker stop &lt;id|nombre&gt;</code>: detiene un contenedor.</li>
+<li><code>docker rm &lt;id|nombre&gt;</code>: elimina un contenedor detenido.</li>
+<li><code>docker rmi &lt;imagen&gt;</code>: elimina una imagen.</li>
+<li><code>docker logs &lt;id|nombre&gt;</code>: muestra la salida de un
+contenedor.</li>
+</ul>
+
+</div>
+
+<h2>Ejercicios</h2>
+<ul class="exercise-list">
+  
+  <li>
+    <a class="btn secondary" href="/modulos/docker/ejercicio/leccion4-ej1">
+      Comando: correr un contenedor publicando un puerto
+    </a>
+  </li>
+  
+  <li>
+    <a class="btn secondary" href="/modulos/docker/ejercicio/leccion4-ej2">
+      Comando: listar contenedores en ejecución
+    </a>
+  </li>
+  
+  <li>
+    <a class="btn secondary" href="/modulos/docker/ejercicio/leccion4-ej3">
+      Comando: listar imágenes locales
+    </a>
+  </li>
+  
+</ul>
+
+</div>
+</body>
+</html>

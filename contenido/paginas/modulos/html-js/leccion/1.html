@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructura básica de HTML — HTML + JS</title>
+  <link rel="stylesheet" href="/modulos/html-js/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/html-js/static/css/style.css">
+  
+</head>
+<body>
+  <div class="navbar">
+    <a class="brand" href="/modulos/html-js/">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion <span>HTML + JS</span>
+    </a>
+    <div>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <a href="/modulos/html-js/">&larr; Todas las lecciones</a>
+  <h1>Lección 1: Estructura básica de HTML</h1>
+
+  <div class="card teoria">
+    
+        <p>Todo documento HTML tiene un <strong>esqueleto</strong> mínimo que el navegador
+        espera para interpretar la página correctamente:</p>
+        <pre class="console">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Mi página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hola mundo&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+        <ul>
+          <li><code>&lt;!DOCTYPE html&gt;</code> le dice al navegador que es HTML5.</li>
+          <li><code>&lt;html&gt;</code> envuelve todo el documento.</li>
+          <li><code>&lt;head&gt;</code> contiene metadatos (título, estilos, etc.), no se ve en pantalla.</li>
+          <li><code>&lt;body&gt;</code> contiene el contenido visible de la página.</li>
+        </ul>
+        <p>Cada etiqueta que se abre (<code>&lt;tag&gt;</code>) debe cerrarse (<code>&lt;/tag&gt;</code>),
+        salvo las etiquetas "vacías" como <code>&lt;br&gt;</code> o <code>&lt;img&gt;</code>.</p>
+        <p>Cuando apretás <strong>Ejecutar</strong>, vas a ver el resultado en la vista previa
+        y, si algo está mal escrito, un mensaje te va a indicar qué etiqueta o símbolo falta
+        y en qué línea aproximada está el problema.</p>
+        
+  </div>
+
+  <h2>Ejercicios</h2>
+  <div class="grid cols-2">
+    
+      <div class="card">
+        <h3>Tu primera página</h3>
+        <p style="color: var(--text-dim);">Escribí un documento HTML completo (DOCTYPE, html, head con title, body) que muestre un &lt;h1&gt; con tu nombre.</p>
+        <a class="btn" href="/modulos/html-js/ejercicio/leccion1-ej1">Resolver</a>
+      </div>
+    
+      <div class="card">
+        <h3>Título y párrafo</h3>
+        <p style="color: var(--text-dim);">Agregá un &lt;h1&gt; con un título y al menos un &lt;p&gt; con un párrafo de texto.</p>
+        <a class="btn" href="/modulos/html-js/ejercicio/leccion1-ej2">Resolver</a>
+      </div>
+    
+  </div>
+
+  </div>
+  <footer class="footnote">ing-troduccion — Introducción a HTML + JavaScript</footer>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Variables y tipos de datos · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/cpp/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/cpp/static/css/modulo.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      <span>C++</span> · Introducción a C++
+    </div>
+    <div>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+      <a class="btn secondary" href="/modulos/cpp/">Inicio del módulo</a>
+    </div>
+  </div>
+  <div class="container">
+    
+<div class="card">
+  <p><a href="/modulos/cpp/">&larr; Todas las lecciones</a></p>
+  <h1>Lección 1: Variables y tipos de datos</h1>
+  <div class="teoria">
+    
+<p>C++ es un lenguaje <strong>compilado</strong> y de <strong>tipado estático</strong>:
+cada variable tiene un tipo fijo que se declara antes de usarla, y el código fuente
+(<code>.cpp</code>) se traduce a un ejecutable con un compilador (el más común en
+Windows es <strong>g++</strong>, parte de MinGW-w64) antes de poder correrlo.</p>
+
+<h3>Estructura mínima de un programa</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hola, mundo!" &lt;&lt; endl;
+    return 0;
+}</code></pre>
+<ul>
+<li><code>#include &lt;iostream&gt;</code>: importa la librería de entrada/salida estándar.</li>
+<li><code>using namespace std;</code>: evita tener que escribir <code>std::cout</code> cada vez.</li>
+<li><code>int main() { ... }</code>: todo programa en C++ arranca ejecutando la función <code>main</code>.</li>
+<li><code>return 0;</code>: indica que el programa terminó sin errores.</li>
+</ul>
+
+<h3>Tipos de datos básicos</h3>
+<table>
+<tr><th>Tipo</th><th>Uso</th><th>Ejemplo</th></tr>
+<tr><td><code>int</code></td><td>números enteros</td><td><code>int edad = 20;</code></td></tr>
+<tr><td><code>double</code></td><td>números con decimales</td><td><code>double precio = 19.99;</code></td></tr>
+<tr><td><code>char</code></td><td>un solo carácter</td><td><code>char inicial = 'A';</code></td></tr>
+<tr><td><code>bool</code></td><td>verdadero/falso</td><td><code>bool activo = true;</code></td></tr>
+<tr><td><code>string</code></td><td>texto (requiere <code>#include &lt;string&gt;</code>)</td><td><code>string nombre = "Ana";</code></td></tr>
+</table>
+
+<h3>Declarar e imprimir</h3>
+<pre><code>int edad = 20;
+double altura = 1.75;
+cout &lt;&lt; "Edad: " &lt;&lt; edad &lt;&lt; ", altura: " &lt;&lt; altura &lt;&lt; endl;</code></pre>
+
+<div class="flash ok">
+<strong>Cómo se corrige tu código acá:</strong> cuando apretás "Ejecutar" o
+"Entregar", tu código se compila con <code>g++</code> y, si compila bien, se
+ejecuta de verdad — vas a ver la salida real de tu programa (lo que imprime
+por <code>cout</code>) en la consola de la página. Si tenés un error de
+sintaxis, te va a mostrar la línea y el mensaje del compilador; si tu
+programa se queda pegado en un bucle infinito, se corta con un aviso.</div>
+
+  </div>
+</div>
+
+<div class="card">
+  <h2>Ejercicios de esta lección</h2>
+  
+  <div class="ejercicio-list">
+    
+    <a class="btn" href="/modulos/cpp/ejercicio/leccion1-ej1">Hola, mundo</a>
+    
+    <a class="btn" href="/modulos/cpp/ejercicio/leccion1-ej2">Variables y datos personales</a>
+    
+  </div>
+  
+</div>
+
+<div class="toolbar">
+  
+    <a class="btn secondary" href="/modulos/cpp/leccion/0">&larr; Lección anterior</a>
+  
+  
+    <a class="btn secondary" href="/modulos/cpp/leccion/2">Lección siguiente &rarr;</a>
+  
+</div>
+
+  </div>
+</body>
+</html>

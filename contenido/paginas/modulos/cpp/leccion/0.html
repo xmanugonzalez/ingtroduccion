@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Antes de empezar: ¿qué es programar en C++? · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/cpp/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/cpp/static/css/modulo.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      <span>C++</span> · Introducción a C++
+    </div>
+    <div>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+      <a class="btn secondary" href="/modulos/cpp/">Inicio del módulo</a>
+    </div>
+  </div>
+  <div class="container">
+    
+<div class="card">
+  <p><a href="/modulos/cpp/">&larr; Todas las lecciones</a></p>
+  <h1>Lección 0: Antes de empezar: ¿qué es programar en C++?</h1>
+  <div class="teoria">
+    
+<p>Programar es escribir instrucciones, paso a paso, para que una computadora
+las ejecute. En C++ esas instrucciones se escriben en un archivo de texto con
+extensión <code>.cpp</code> (el <strong>código fuente</strong>), pero la
+computadora no puede correr ese texto directamente: primero necesita
+traducirlo a un programa ejecutable.</p>
+
+<h3>Compilar y ejecutar</h3>
+<p>Ese trabajo de traducción lo hace un programa llamado <strong>compilador</strong>
+(en este módulo usamos <code>g++</code>). El proceso tiene dos pasos bien
+diferenciados y es importante distinguirlos porque los errores pueden pasar
+en cualquiera de los dos:</p>
+<ol>
+<li><strong>Compilar:</strong> el compilador lee tu <code>.cpp</code> y revisa que
+esté bien escrito según las reglas de C++ (sintaxis, tipos, etc.). Si encontrás
+un error acá, el programa <em>ni siquiera llega a generarse</em>: es un
+<strong>error de compilación</strong>.</li>
+<li><strong>Ejecutar:</strong> si compiló sin errores, se genera un programa
+ejecutable y recién ahí se corre. Los problemas que aparecen en este paso
+(por ejemplo, un bucle que nunca termina) son distintos de los errores de
+compilación.</li>
+</ol>
+
+<div class="flash ok">
+En este módulo no hace falta instalar nada: cuando apretás "Ejecutar" o
+"Entregar" en un ejercicio, tu código se compila y se ejecuta de verdad en el
+servidor, y vas a ver la salida real de tu programa. Si hay un error de
+compilación, te va a mostrar en qué línea está y una explicación en español de
+qué suele significar ese error.
+</div>
+
+<h3>Estructura mínima de un programa</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hola, mundo!" &lt;&lt; endl;
+    return 0;
+}</code></pre>
+<p>Todo programa en C++ necesita una función <code>main</code>: es el punto por
+donde arranca la ejecución. Las líneas dentro de las llaves <code>{ }</code> se
+ejecutan una por una, de arriba hacia abajo.</p>
+
+<h3>Cosas que rompen la compilación (para reconocerlas)</h3>
+<ul>
+<li>Olvidarte un punto y coma <code>;</code> al final de una instrucción.</li>
+<li>Dejar una llave <code>{</code> sin su <code>}</code> correspondiente (o al revés).</li>
+<li>Usar una variable que nunca declaraste, o escribir mal su nombre.</li>
+<li>Usar algo como <code>cout</code> o <code>string</code> sin haber puesto el
+<code>#include</code> que corresponde arriba del todo.</li>
+</ul>
+<p>No hace falta memorizar esta lista: cuando te pase alguno de estos errores,
+el módulo te lo va a señalar con la línea exacta y una pista de cómo
+solucionarlo.</p>
+
+<h3>Comentarios</h3>
+<p>Podés escribir notas dentro del código que el compilador ignora por
+completo, para explicar qué hace una parte o dejarte recordatorios:</p>
+<pre><code>// Esto es un comentario de una sola linea
+
+/* Esto es un comentario
+   de varias lineas */</code></pre>
+
+<h3>Un vistazo al editor de código</h3>
+<p>En cada ejercicio vas a tener una caja de texto para escribir tu código, un
+botón "Ejecutar" para probarlo cuantas veces quieras, y un botón "Entregar
+tarea" (si venís de una asignación del central). Al escribir, la tecla
+<kbd>Tab</kbd> inserta una sangría (espacios) en vez de sacarte del cuadro de
+texto, igual que en un editor de código real.</p>
+
+  </div>
+</div>
+
+<div class="card">
+  <h2>Ejercicios de esta lección</h2>
+  
+  <p class="text-dim" style="color:var(--text-dim)">
+    Esta lección es introductoria y no tiene ejercicios de código. Cuando termines
+    de leerla, pasá a la lección siguiente.
+  </p>
+  
+</div>
+
+<div class="toolbar">
+  
+  
+    <a class="btn secondary" href="/modulos/cpp/leccion/1">Lección siguiente &rarr;</a>
+  
+</div>
+
+  </div>
+</body>
+</html>

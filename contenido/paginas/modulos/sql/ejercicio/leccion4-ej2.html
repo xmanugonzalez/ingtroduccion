@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dar de baja un producto · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/sql/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/sql/static/css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="/modulos/sql/" class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion · <span>SQL Server</span>
+    </a>
+    <div>
+      
+      <a href="/" class="btn secondary" style="margin-left:10px;">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <p>
+    <a href="/modulos/sql/leccion/leccion4">&larr; Volver a la lección</a>
+  </p>
+  <h1>leccion4-ej2 — Dar de baja un producto</h1>
+  <div class="card">
+    <p>Borrá de la tabla <code>productos</code> el producto con <code>id = 7</code>.</p>
+  </div>
+
+  <div class="editor-layout">
+    <div class="card">
+      <h3>Tu consulta SQL</h3>
+      <textarea id="editor" class="code-editor" spellcheck="false">-- Escribí el DELETE acá
+</textarea>
+      <div class="acciones">
+        <button id="btn-ejecutar" class="btn">Ejecutar</button>
+        
+        
+          <button id="btn-reset" class="btn secondary">Reiniciar datos</button>
+        
+      </div>
+    </div>
+    <div class="card">
+      <h3>Resultado</h3>
+      <div id="mensaje" class="badge">Todavía no ejecutaste nada.</div>
+      <div id="titulo-resultado" class="titulo-resultado"></div>
+      <div id="tabla-resultado" class="resultado-tabla"></div>
+      <pre id="consola" class="console" style="margin-top:10px;"></pre>
+    </div>
+  </div>
+
+  
+    <div class="card">
+      <h3>Datos disponibles</h3>
+      <p class="ayuda">Estas son las tablas sobre las que se ejecuta tu consulta.</p>
+      
+        <h4 class="nombre-tabla">productos</h4>
+        <div class="resultado-tabla">
+          <table class="datos">
+            <thead>
+              <tr><th>id</th><th>nombre</th><th>categoria</th><th>precio</th><th>stock</th></tr>
+            </thead>
+            <tbody>
+              
+                <tr><td>1</td><td>Teclado mecanico RGB</td><td>Perifericos</td><td>285000</td><td>12</td></tr>
+              
+                <tr><td>2</td><td>Mouse inalambrico Logitech</td><td>Perifericos</td><td>95000</td><td>40</td></tr>
+              
+                <tr><td>3</td><td>Monitor 24&#34; Full HD</td><td>Monitores</td><td>1250000</td><td>7</td></tr>
+              
+                <tr><td>4</td><td>Teclado inalambrico compacto</td><td>Perifericos</td><td>165000</td><td>0</td></tr>
+              
+                <tr><td>5</td><td>Notebook Lenovo IdeaPad</td><td>Computadoras</td><td>4850000</td><td>3</td></tr>
+              
+                <tr><td>6</td><td>Auriculares Bluetooth</td><td>Audio</td><td>210000</td><td>25</td></tr>
+              
+                <tr><td>7</td><td>Webcam HD 1080p</td><td>Perifericos</td><td>175000</td><td>0</td></tr>
+              
+                <tr><td>8</td><td>Disco SSD 480GB</td><td>Almacenamiento</td><td>320000</td><td>18</td></tr>
+              
+                <tr><td>9</td><td>Memoria RAM 8GB DDR4</td><td>Componentes</td><td>245000</td><td>15</td></tr>
+              
+                <tr><td>10</td><td>Monitor 27&#34; 144Hz</td><td>Monitores</td><td>2100000</td><td>4</td></tr>
+              
+                <tr><td>11</td><td>Parlante portatil JBL</td><td>Audio</td><td>380000</td><td>9</td></tr>
+              
+                <tr><td>12</td><td>Teclado numerico USB</td><td>Perifericos</td><td>55000</td><td>22</td></tr>
+              
+            </tbody>
+          </table>
+        </div>
+      
+    </div>
+  
+
+  <script>
+    const ejercicioId = "leccion4-ej2";
+
+    function pintarTabla(columnas, filas) {
+      const cont = document.getElementById('tabla-resultado');
+      cont.innerHTML = '';
+      if (!columnas || !columnas.length) return;
+      const tabla = document.createElement('table');
+      tabla.className = 'datos';
+      const thead = document.createElement('thead');
+      const trh = document.createElement('tr');
+      columnas.forEach(c => {
+        const th = document.createElement('th');
+        th.textContent = c;
+        trh.appendChild(th);
+      });
+      thead.appendChild(trh);
+      tabla.appendChild(thead);
+      const tbody = document.createElement('tbody');
+      (filas || []).forEach(fila => {
+        const tr = document.createElement('tr');
+        fila.forEach(v => {
+          const td = document.createElement('td');
+          td.textContent = v;
+          if (v === 'NULL') td.className = 'nulo';
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      tabla.appendChild(tbody);
+      cont.appendChild(tabla);
+      const pie = document.createElement('div');
+      pie.className = 'ayuda';
+      const n = (filas || []).length;
+      pie.textContent = n + (n === 1 ? ' fila' : ' filas');
+      cont.appendChild(pie);
+    }
+
+    async function ejecutar(endpoint) {
+      const codigo = document.getElementById('editor').value;
+      const consola = document.getElementById('consola');
+      const mensaje = document.getElementById('mensaje');
+      const titulo = document.getElementById('titulo-resultado');
+      mensaje.textContent = 'Ejecutando...';
+      mensaje.className = 'badge';
+      consola.className = 'console';
+      consola.textContent = '';
+      titulo.textContent = '';
+      pintarTabla([], []);
+      try {
+        const resp = await fetch(endpoint, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({codigo: codigo, ejercicio_id: ejercicioId})
+        });
+        const data = await resp.json();
+        if (data.stderr) {
+          consola.textContent = data.stderr;
+          consola.className = 'console error';
+        } else {
+          consola.textContent = '';
+          consola.className = 'console';
+        }
+        titulo.textContent = data.titulo_resultado || '';
+        pintarTabla(data.columnas, data.filas);
+        if (typeof data.afectadas === 'number' && data.afectadas !== null) {
+          const aviso = document.createElement('div');
+          aviso.className = 'ayuda';
+          aviso.textContent = data.afectadas + ' fila(s) afectada(s).';
+          document.getElementById('tabla-resultado').prepend(aviso);
+        }
+        let texto = data.mensaje || '';
+        if (typeof data.enviado !== 'undefined') {
+          texto += data.enviado ? ' (entregado al central)' : ' (no se pudo entregar al central, se guardó localmente)';
+        }
+        mensaje.textContent = texto;
+        mensaje.className = 'badge ' + (data.ok ? 'ok' : 'error');
+      } catch (e) {
+        consola.textContent = String(e);
+        consola.className = 'console error';
+        mensaje.textContent = 'Error de red al ejecutar.';
+        mensaje.className = 'badge error';
+      }
+    }
+
+    document.getElementById('btn-ejecutar').addEventListener('click', () => ejecutar('/modulos/sql/api/run'));
+    const btnEntregar = document.getElementById('btn-entregar');
+    if (btnEntregar) {
+      btnEntregar.addEventListener('click', () => ejecutar('/modulos/sql/api/submit'));
+    }
+    const btnReset = document.getElementById('btn-reset');
+    if (btnReset) {
+      btnReset.addEventListener('click', async () => {
+        await fetch('/modulos/sql/api/reset', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ejercicio_id: ejercicioId})
+        });
+        window.location.reload();
+      });
+    }
+  </script>
+
+  </div>
+  <footer class="footnote">Introducción a SQL Server · ing-troduccion</footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Qué es un contenedor? ¿Qué es una imagen? — Docker</title>
+<link rel="stylesheet" href="/modulos/docker/static/css/base_style.css">
+<link rel="stylesheet" href="/modulos/docker/static/css/style.css">
+</head>
+<body>
+<div class="navbar">
+  <a href="/modulos/docker/" class="brand">
+    <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+    ing-troduccion · <span>Docker</span>
+  </a>
+  <div>
+    <a href="/" class="btn secondary">Volver al central</a>
+  </div>
+</div>
+<div class="container">
+  
+<div class="breadcrumb"><a href="/modulos/docker/">Lecciones</a> / ¿Qué es un contenedor? ¿Qué es una imagen?</div>
+
+<h1>¿Qué es un contenedor? ¿Qué es una imagen?</h1>
+
+<div class="card theory">
+  
+<p><strong>Cómo se corrigen los ejercicios:</strong> acá vas a escribir
+Dockerfiles y comandos <code>docker</code>, y un validador revisa que la
+sintaxis, las instrucciones y el orden entre ellas sean correctos, línea por
+línea. Es una forma de practicar la <em>forma</em> correcta de escribir estas
+cosas antes de usarlas con Docker instalado de verdad.</p>
+
+<h3>Contenedor vs. imagen</h3>
+<p>Una <strong>imagen</strong> es un paquete inmutable que contiene todo lo
+necesario para correr una aplicación: código, dependencias, un sistema de
+archivos base y configuración (variables de entorno, comando por defecto,
+etc). Es como una "foto" o plantilla de un sistema.</p>
+<p>Un <strong>contenedor</strong> es una <em>instancia en ejecución</em> de una
+imagen: un proceso aislado (con su propio sistema de archivos, red y espacio
+de procesos) que corre a partir de esa plantilla. Podés crear muchos
+contenedores a partir de la misma imagen, igual que podés crear muchos objetos
+a partir de la misma clase en programación orientada a objetos.</p>
+
+<h3>¿Por qué usar contenedores?</h3>
+<ul>
+<li><strong>Portabilidad:</strong> "funciona en mi máquina" deja de ser un
+problema, porque el contenedor lleva su propio entorno.</li>
+<li><strong>Aislamiento:</strong> cada contenedor tiene sus propias
+dependencias, sin pisar las del sistema operativo anfitrión ni las de otros
+contenedores.</li>
+<li><strong>Reproducibilidad:</strong> la imagen se construye una vez a partir
+de instrucciones (el Dockerfile) y siempre da el mismo resultado.</li>
+<li><strong>Livianos:</strong> a diferencia de una máquina virtual completa,
+un contenedor comparte el kernel del sistema operativo anfitrión, por lo que
+arranca en segundos y pesa mucho menos.</li>
+</ul>
+
+<h3>Contenedor vs. máquina virtual</h3>
+<p>Una máquina virtual virtualiza hardware completo y corre un sistema
+operativo entero encima (pesado, minutos para arrancar). Un contenedor
+virtualiza solo el espacio de usuario: comparte el kernel del host, así que es
+mucho más liviano y rápido (segundos o menos).</p>
+
+</div>
+
+<h2>Ejercicios</h2>
+<ul class="exercise-list">
+  
+  <li>
+    <a class="btn secondary" href="/modulos/docker/ejercicio/leccion1-ej1">
+      Verdadero o falso, en forma de comando
+    </a>
+  </li>
+  
+  <li>
+    <a class="btn secondary" href="/modulos/docker/ejercicio/leccion1-ej2">
+      Tu primer Dockerfile (mínimo)
+    </a>
+  </li>
+  
+</ul>
+
+</div>
+</body>
+</html>

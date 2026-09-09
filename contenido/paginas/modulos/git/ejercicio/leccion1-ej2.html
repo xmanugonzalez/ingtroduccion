@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ver en qué rama estás — Ejercicio</title>
+  <link rel="stylesheet" href="/modulos/git/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/git/static/css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion <span>/ Git</span>
+    </div>
+    <div>
+      
+        <span class="badge">modo local</span>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <a href="/modulos/git/leccion/1">&larr; Volver a la lección</a>
+  <h1>Ver en qué rama estás</h1>
+
+  <div class="card">
+    <p>Todo repositorio Git tiene una rama activa (por defecto &#39;main&#39;). Consultá el estado del repositorio para confirmar en qué rama estás parado.</p>
+  </div>
+
+  <div class="card">
+    <div class="terminal-wrap">
+      <div class="prompt-hint">Escribí uno o más comandos git, uno por línea. Ejemplo: git status</div>
+      <textarea id="terminal" class="terminal code-editor" placeholder="$ git status"></textarea>
+    </div>
+
+    <div class="actions-row">
+      <button class="btn" id="btn-run">Ejecutar</button>
+      <button class="btn secondary" id="btn-reset">Reiniciar repo del ejercicio</button>
+      
+    </div>
+
+    <div id="consola" class="console">La salida de tus comandos va a aparecer acá.</div>
+    <div id="mensaje" style="margin-top:10px;"></div>
+  </div>
+
+  <script>
+    const ejercicioId = "leccion1-ej2";
+    const terminal = document.getElementById('terminal');
+    const consola = document.getElementById('consola');
+    const mensajeDiv = document.getElementById('mensaje');
+
+    function pintarResultado(data) {
+      consola.classList.remove('ok', 'error');
+      let salida = '';
+      if (data.stdout) salida += data.stdout;
+      if (data.stderr) salida += (salida ? '\n' : '') + data.stderr;
+      if (!salida) salida = '(sin salida)';
+      consola.textContent = salida;
+      consola.classList.add(data.ok ? 'ok' : 'error');
+
+      mensajeDiv.innerHTML = '';
+      const badge = document.createElement('span');
+      badge.className = 'badge ' + (data.ok ? 'ok' : 'error');
+      badge.textContent = data.mensaje || (data.ok ? 'Correcto' : 'Todavía no');
+      mensajeDiv.appendChild(badge);
+
+      if (data.linea_error) {
+        const l = document.createElement('div');
+        l.style.marginTop = '6px';
+        l.style.fontWeight = 'bold';
+        l.textContent = 'Línea con problema: ' + data.linea_error;
+        mensajeDiv.appendChild(l);
+      }
+      if ('enviado' in data) {
+        const e = document.createElement('div');
+        e.style.marginTop = '6px';
+        e.className = 'badge ' + (data.enviado ? 'ok' : '');
+        e.textContent = data.enviado ? 'Entrega enviada al central' : 'No se envió al central (modo local o sin conexión)';
+        mensajeDiv.appendChild(e);
+      }
+    }
+
+    async function llamar(url) {
+      try {
+        const resp = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ codigo: terminal.value, ejercicio_id: ejercicioId })
+        });
+        const data = await resp.json();
+        pintarResultado(data);
+      } catch (e) {
+        consola.textContent = 'Error de red al contactar el servidor: ' + e;
+        consola.className = 'console error';
+      }
+    }
+
+    document.getElementById('btn-run').addEventListener('click', () => llamar('/modulos/git/api/run'));
+    const btnSubmit = document.getElementById('btn-submit');
+    if (btnSubmit) {
+      btnSubmit.addEventListener('click', () => llamar('/modulos/git/api/submit'));
+    }
+
+    document.getElementById('btn-reset').addEventListener('click', async () => {
+      consola.textContent = 'Reiniciando repositorio...';
+      consola.className = 'console';
+      try {
+        const resp = await fetch('/modulos/git/api/reset', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ejercicio_id: ejercicioId })
+        });
+        const data = await resp.json();
+        consola.textContent = data.mensaje || 'Repositorio reiniciado.';
+        consola.className = 'console ' + (data.ok ? 'ok' : 'error');
+        mensajeDiv.innerHTML = '';
+      } catch (e) {
+        consola.textContent = 'Error de red al reiniciar: ' + e;
+        consola.className = 'console error';
+      }
+    });
+  </script>
+
+  </div>
+</body>
+</html>

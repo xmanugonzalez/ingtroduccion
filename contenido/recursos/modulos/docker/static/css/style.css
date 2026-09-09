@@ -1,0 +1,39 @@
+/* style.css — overrides propios del módulo Docker sobre base_style.css */
+
+.lesson-list { display: grid; gap: 14px; }
+
+.lesson-card h3 { margin-top: 0; }
+
+.exercise-list { list-style: none; padding: 0; margin: 10px 0 0; }
+.exercise-list li { margin-bottom: 6px; }
+
+.theory { line-height: 1.6; }
+.theory pre {
+  background: var(--bg-panel-2);
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+}
+.theory code {
+  font-family: var(--font-mono);
+  background: var(--bg-panel-2);
+  padding: 1px 5px;
+  font-size: 0.9em;
+}
+.theory pre code { background: none; padding: 0; }
+
+.editor-actions { display: flex; gap: 10px; margin: 12px 0; flex-wrap: wrap; align-items: center; }
+
+.help-box {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.breadcrumb { margin-bottom: 16px; font-size: 0.9rem; color: var(--text-dim); }
+.breadcrumb a { color: var(--text-dim); }
+.breadcrumb a:hover { color: var(--accent); }
+
+.exercise-meta { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 0; }

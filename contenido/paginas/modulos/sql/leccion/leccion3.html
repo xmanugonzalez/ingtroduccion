@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3. SELECT y WHERE · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/sql/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/sql/static/css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="/modulos/sql/" class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion · <span>SQL Server</span>
+    </a>
+    <div>
+      
+      <a href="/" class="btn secondary" style="margin-left:10px;">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <p><a href="/modulos/sql/">&larr; Volver a lecciones</a></p>
+  <h1>3. SELECT y WHERE</h1>
+  <div class="card teoria">
+    
+<p><code>SELECT</code> es la sentencia más usada: sirve para leer datos.</p>
+<pre><code>SELECT nombre, precio FROM productos;</code></pre>
+<p>Para traer todas las columnas se usa <code>*</code>:</p>
+<pre><code>SELECT * FROM productos;</code></pre>
+<p>Para filtrar filas se agrega <code>WHERE</code> con una condición:</p>
+<pre><code>SELECT * FROM productos WHERE precio &gt; 300000;</code></pre>
+<p>Operadores útiles en <code>WHERE</code>:</p>
+<ul>
+<li><code>=</code>, <code>&lt;&gt;</code> (distinto), <code>&gt;</code>,
+<code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></li>
+<li><code>AND</code>, <code>OR</code>, <code>NOT</code></li>
+<li><code>LIKE 'Teclado%'</code>: empieza con "Teclado" (<code>%</code> es
+cualquier cantidad de caracteres, <code>_</code> es exactamente uno).</li>
+<li><code>IN ('Audio', 'Monitores')</code>: está en la lista.</li>
+<li><code>IS NULL</code> / <code>IS NOT NULL</code>: la columna no tiene valor.</li>
+</ul>
+<p>Recordá: los textos van entre comillas simples
+(<code>WHERE categoria = 'Audio'</code>), nunca dobles.</p>
+
+  </div>
+
+  <h2>Ejercicios de esta lección</h2>
+  <div class="grid cols-2">
+    
+      <div class="card">
+        <strong>leccion3-ej1</strong> — Productos caros
+        <div style="margin-top:10px;">
+          <a class="btn" href="/modulos/sql/ejercicio/leccion3-ej1">Practicar</a>
+        </div>
+      </div>
+    
+      <div class="card">
+        <strong>leccion3-ej2</strong> — Productos sin stock
+        <div style="margin-top:10px;">
+          <a class="btn" href="/modulos/sql/ejercicio/leccion3-ej2">Practicar</a>
+        </div>
+      </div>
+    
+      <div class="card">
+        <strong>leccion3-ej3</strong> — Nombres que empiezan con &#39;Teclado&#39;
+        <div style="margin-top:10px;">
+          <a class="btn" href="/modulos/sql/ejercicio/leccion3-ej3">Practicar</a>
+        </div>
+      </div>
+    
+  </div>
+
+  </div>
+  <footer class="footnote">Introducción a SQL Server · ing-troduccion</footer>
+</body>
+</html>

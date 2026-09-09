@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estructura de un Dockerfile — Docker</title>
+<link rel="stylesheet" href="/modulos/docker/static/css/base_style.css">
+<link rel="stylesheet" href="/modulos/docker/static/css/style.css">
+</head>
+<body>
+<div class="navbar">
+  <a href="/modulos/docker/" class="brand">
+    <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+    ing-troduccion · <span>Docker</span>
+  </a>
+  <div>
+    <a href="/" class="btn secondary">Volver al central</a>
+  </div>
+</div>
+<div class="container">
+  
+<div class="breadcrumb"><a href="/modulos/docker/">Lecciones</a> / Estructura de un Dockerfile</div>
+
+<h1>Estructura de un Dockerfile</h1>
+
+<div class="card theory">
+  
+<p>Un <strong>Dockerfile</strong> es un archivo de texto plano con una lista de
+instrucciones, una por línea, que Docker usa para construir una imagen paso a
+paso. Cada instrucción genera una "capa" (layer) en la imagen final.</p>
+
+<h3>Reglas básicas de estructura</h3>
+<ul>
+<li>Las líneas vacías se ignoran.</li>
+<li>Las líneas que empiezan con <code>#</code> son comentarios y se ignoran.</li>
+<li>Toda línea de instrucción real debe empezar con una palabra clave en
+mayúsculas seguida de argumentos, por ejemplo: <code>RUN apt-get update</code>.</li>
+<li><strong>La primera instrucción no-comentario del archivo debe ser
+siempre <code>FROM</code></strong>: define la imagen base sobre la que se
+construye todo lo demás. Sin FROM, Docker no sabe desde dónde partir.</li>
+</ul>
+
+<h3>Instrucciones válidas que vamos a usar</h3>
+<p><code>FROM, RUN, COPY, ADD, WORKDIR, CMD, ENTRYPOINT, EXPOSE, ENV, ARG,
+LABEL, VOLUME, USER</code></p>
+
+<h3>Ejemplo comentado</h3>
+<pre>
+# Imagen base con Python 3.11
+FROM python:3.11
+
+# Directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copiamos el código al contenedor
+COPY . /app
+
+# Comando por defecto al iniciar el contenedor
+CMD ["python", "app.py"]
+</pre>
+
+</div>
+
+<h2>Ejercicios</h2>
+<ul class="exercise-list">
+  
+  <li>
+    <a class="btn secondary" href="/modulos/docker/ejercicio/leccion2-ej1">
+      Ordenar bien las instrucciones
+    </a>
+  </li>
+  
+  <li>
+    <a class="btn secondary" href="/modulos/docker/ejercicio/leccion2-ej2">
+      Encontrar el error de estructura
+    </a>
+  </li>
+  
+</ul>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript básico: variables y funciones — HTML + JS</title>
+  <link rel="stylesheet" href="/modulos/html-js/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/html-js/static/css/style.css">
+  
+</head>
+<body>
+  <div class="navbar">
+    <a class="brand" href="/modulos/html-js/">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion <span>HTML + JS</span>
+    </a>
+    <div>
+      
+      <a class="btn secondary" href="/">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <a href="/modulos/html-js/">&larr; Todas las lecciones</a>
+  <h1>Lección 4: JavaScript básico: variables y funciones</h1>
+
+  <div class="card teoria">
+    
+        <p>El código JavaScript va dentro de una etiqueta <code>&lt;script&gt;</code>,
+        normalmente al final del <code>&lt;body&gt;</code>.</p>
+        <pre class="console">&lt;script&gt;
+  let nombre = "Ana";
+  const PI = 3.14;
+
+  function saludar(persona) {
+    return "Hola, " + persona;
+  }
+
+  console.log(saludar(nombre));
+&lt;/script&gt;</pre>
+        <ul>
+          <li><code>let</code> declara una variable que puede cambiar.</li>
+          <li><code>const</code> declara una variable que no se puede reasignar.</li>
+          <li><code>function nombre(parametros) { ... }</code> declara una función.</li>
+          <li><code>console.log(...)</code> imprime en la consola del navegador.</li>
+        </ul>
+        
+  </div>
+
+  <h2>Ejercicios</h2>
+  <div class="grid cols-2">
+    
+      <div class="card">
+        <h3>Variables</h3>
+        <p style="color: var(--text-dim);">Dentro de un &lt;script&gt;, declará una variable con let y otra con const, e imprimilas con console.log.</p>
+        <a class="btn" href="/modulos/html-js/ejercicio/leccion4-ej1">Resolver</a>
+      </div>
+    
+      <div class="card">
+        <h3>Función que suma</h3>
+        <p style="color: var(--text-dim);">Creá una función llamada sumar que reciba dos parámetros y devuelva la suma. Llamala y mostrá el resultado con console.log.</p>
+        <a class="btn" href="/modulos/html-js/ejercicio/leccion4-ej2">Resolver</a>
+      </div>
+    
+  </div>
+
+  </div>
+  <footer class="footnote">ing-troduccion — Introducción a HTML + JavaScript</footer>
+</body>
+</html>

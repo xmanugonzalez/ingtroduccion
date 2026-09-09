@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crear la tabla productos · ing-troduccion</title>
+  <link rel="stylesheet" href="/modulos/sql/static/css/base_style.css">
+  <link rel="stylesheet" href="/modulos/sql/static/css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="/modulos/sql/" class="brand">
+      <img src="/static/logo.png" alt="" onerror="this.style.display='none'">
+      ing-troduccion · <span>SQL Server</span>
+    </a>
+    <div>
+      
+      <a href="/" class="btn secondary" style="margin-left:10px;">Volver al central</a>
+    </div>
+  </div>
+  <div class="container">
+    
+  <p>
+    <a href="/modulos/sql/leccion/leccion1">&larr; Volver a la lección</a>
+  </p>
+  <h1>leccion1-ej1 — Crear la tabla productos</h1>
+  <div class="card">
+    <p>Escribí una sentencia <code>CREATE TABLE</code> para crear la tabla <code>productos</code> con estas columnas, en este orden: <code>id</code> <code>INT</code> clave primaria, <code>nombre</code> <code>VARCHAR(100)</code> obligatorio (NOT NULL), <code>precio</code> <code>DECIMAL(12,2)</code> y <code>stock</code> <code>INT</code>.</p>
+  </div>
+
+  <div class="editor-layout">
+    <div class="card">
+      <h3>Tu consulta SQL</h3>
+      <textarea id="editor" class="code-editor" spellcheck="false">-- Creá la tabla productos acá
+</textarea>
+      <div class="acciones">
+        <button id="btn-ejecutar" class="btn">Ejecutar</button>
+        
+        
+      </div>
+    </div>
+    <div class="card">
+      <h3>Resultado</h3>
+      <div id="mensaje" class="badge">Todavía no ejecutaste nada.</div>
+      <div id="titulo-resultado" class="titulo-resultado"></div>
+      <div id="tabla-resultado" class="resultado-tabla"></div>
+      <pre id="consola" class="console" style="margin-top:10px;"></pre>
+    </div>
+  </div>
+
+  
+
+  <script>
+    const ejercicioId = "leccion1-ej1";
+
+    function pintarTabla(columnas, filas) {
+      const cont = document.getElementById('tabla-resultado');
+      cont.innerHTML = '';
+      if (!columnas || !columnas.length) return;
+      const tabla = document.createElement('table');
+      tabla.className = 'datos';
+      const thead = document.createElement('thead');
+      const trh = document.createElement('tr');
+      columnas.forEach(c => {
+        const th = document.createElement('th');
+        th.textContent = c;
+        trh.appendChild(th);
+      });
+      thead.appendChild(trh);
+      tabla.appendChild(thead);
+      const tbody = document.createElement('tbody');
+      (filas || []).forEach(fila => {
+        const tr = document.createElement('tr');
+        fila.forEach(v => {
+          const td = document.createElement('td');
+          td.textContent = v;
+          if (v === 'NULL') td.className = 'nulo';
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      tabla.appendChild(tbody);
+      cont.appendChild(tabla);
+      const pie = document.createElement('div');
+      pie.className = 'ayuda';
+      const n = (filas || []).length;
+      pie.textContent = n + (n === 1 ? ' fila' : ' filas');
+      cont.appendChild(pie);
+    }
+
+    async function ejecutar(endpoint) {
+      const codigo = document.getElementById('editor').value;
+      const consola = document.getElementById('consola');
+      const mensaje = document.getElementById('mensaje');
+      const titulo = document.getElementById('titulo-resultado');
+      mensaje.textContent = 'Ejecutando...';
+      mensaje.className = 'badge';
+      consola.className = 'console';
+      consola.textContent = '';
+      titulo.textContent = '';
+      pintarTabla([], []);
+      try {
+        const resp = await fetch(endpoint, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({codigo: codigo, ejercicio_id: ejercicioId})
+        });
+        const data = await resp.json();
+        if (data.stderr) {
+          consola.textContent = data.stderr;
+          consola.className = 'console error';
+        } else {
+          consola.textContent = '';
+          consola.className = 'console';
+        }
+        titulo.textContent = data.titulo_resultado || '';
+        pintarTabla(data.columnas, data.filas);
+        if (typeof data.afectadas === 'number' && data.afectadas !== null) {
+          const aviso = document.createElement('div');
+          aviso.className = 'ayuda';
+          aviso.textContent = data.afectadas + ' fila(s) afectada(s).';
+          document.getElementById('tabla-resultado').prepend(aviso);
+        }
+        let texto = data.mensaje || '';
+        if (typeof data.enviado !== 'undefined') {
+          texto += data.enviado ? ' (entregado al central)' : ' (no se pudo entregar al central, se guardó localmente)';
+        }
+        mensaje.textContent = texto;
+        mensaje.className = 'badge ' + (data.ok ? 'ok' : 'error');
+      } catch (e) {
+        consola.textContent = String(e);
+        consola.className = 'console error';
+        mensaje.textContent = 'Error de red al ejecutar.';
+        mensaje.className = 'badge error';
+      }
+    }
+
+    document.getElementById('btn-ejecutar').addEventListener('click', () => ejecutar('/modulos/sql/api/run'));
+    const btnEntregar = document.getElementById('btn-entregar');
+    if (btnEntregar) {
+      btnEntregar.addEventListener('click', () => ejecutar('/modulos/sql/api/submit'));
+    }
+    const btnReset = document.getElementById('btn-reset');
+    if (btnReset) {
+      btnReset.addEventListener('click', async () => {
+        await fetch('/modulos/sql/api/reset', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ejercicio_id: ejercicioId})
+        });
+        window.location.reload();
+      });
+    }
+  </script>
+
+  </div>
+  <footer class="footnote">Introducción a SQL Server · ing-troduccion</footer>
+</body>
+</html>
